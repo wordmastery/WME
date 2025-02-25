@@ -1,0 +1,14 @@
+{
+  "vocabulary": [
+    { "word": "apple", "hindiMeaning": "सेब" },
+    { "word": "banana", "hindiMeaning": "केला" },
+    { "word": "orange", "hindiMeaning": "संतरा" },
+    { "word": "grape", "hindiMeaning": "अंगूर" },
+    { "word": "mango", "hindiMeaning": "आम" },
+    { "word": "pineapple", "hindiMeaning": "अनानास" },
+    { "word": "watermelon", "hindiMeaning": "तरबूज" },
+    { "word": "guava", "hindiMeaning": "अमरूद" },
+    { "word": "papaya", "hindiMeaning": "पपीता" },
+    { "word": "peach", "hindiMeaning": "आड़ू" }
+  ]
+}

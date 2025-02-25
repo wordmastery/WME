@@ -1,0 +1,143 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #212529;
+  text-align: center;
+}
+
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header button {
+  background-color: #495057;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+header button:hover {
+  background-color: #adb5bd;
+}
+
+main {
+  padding: 20px;
+}
+
+#search-bar {
+  width: 70%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#vocab-list {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.vocab-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vocab-item span {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  flex: 1;
+}
+
+.listen-btn {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.listen-btn:hover {
+  background-color: #138496;
+}
+
+#pagination {
+  margin-top: 20px;
+}
+
+#pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#pagination button:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+body.dark-mode header {
+  background-color: #495057;
+}
+
+body.dark-mode .vocab-item {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+body.dark-mode button {
+  background-color: #6c757d;
+  color: white;
+}
