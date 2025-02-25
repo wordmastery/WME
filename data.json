@@ -1,10 +1,10 @@
 {
   "vocabulary": [
-    { "word": "hello", "hindiMeaning": "नमस्ते" },
-    { "word": "hi", "hindiMeaning": "नमस्ते" },
-    { "word": "please", "hindiMeaning": "कृपया" },
-    { "word": "thank you", "hindiMeaning": "धन्यवाद" },
-    { "word": "sorry", "hindiMeaning": "माफ कीजिए" },
+    { "word": "I", "hindiMeaning": "मैने" },
+    { "word": "I also ", "hindiMeaning": "मैने भी" },
+    { "word": "Myself", "hindiMeaning": "मैने स्वयम " },
+    { "word": "I do ", "hindiMeaning": "मैने तो" },
+    { "word": "Only me/I ", "hindiMeaning": "मै ही " },
     { "word": "welcome", "hindiMeaning": "स्वागत है" },
     { "word": "yes", "hindiMeaning": "हाँ" },
     { "word": "no", "hindiMeaning": "नहीं" },
