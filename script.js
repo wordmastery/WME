@@ -3,14 +3,17 @@ const vocabList = document.getElementById("vocab-list");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const pageInfo = document.getElementById("page-info");
-const searchBar = document.getElementById("search-bar");
-const toggleDarkMode = document.getElementById("dark-mode-toggle");
 
 // Variables
 let currentPage = 0;
 const wordsPerPage = 5;
 let vocabulary = [];
-let speedState = 0; // 0 = normal, 1 = slow, 2 = slower
+const wordSpeedState = {}; // Tracks speed for each word
+
+// Load currentPage from localStorage if available
+if (localStorage.getItem("currentPage")) {
+  currentPage = parseInt(localStorage.getItem("currentPage"));
+}
 
 // Fetch Data from JSON
 fetch("data.json")
@@ -22,46 +25,62 @@ fetch("data.json")
   .catch((error) => console.error("Error fetching data:", error));
 
 // Render Vocabulary
-function renderVocabulary() {
+function renderVocabulary(filteredList = null) {
+  const list = filteredList || vocabulary;
   const start = currentPage * wordsPerPage;
   const end = start + wordsPerPage;
-  const wordsToShow = vocabulary.slice(start, end);
+  const wordsToShow = list.slice(start, end);
 
   vocabList.innerHTML = wordsToShow
     .map(
       (item) => `
       <div class="vocab-item">
-        <span>${item.word}</span>
-        <span style="font-size: 14px; color: #555;">(${item.hindiMeaning})</span>
+        <span>${item.word} (${item.hindiMeaning})</span>
         <button class="listen-btn" onclick="playAudio('${item.word}')">Listen</button>
       </div>
     `
     )
     .join("");
 
+  // Update pagination buttons
   prevBtn.disabled = currentPage === 0;
-  nextBtn.disabled = end >= vocabulary.length;
+  nextBtn.disabled = end >= list.length;
 
-  pageInfo.textContent = `Page ${currentPage + 1} of ${Math.ceil(
-    vocabulary.length / wordsPerPage
-  )}`;
+  // Update page info
+  pageInfo.textContent = `Page ${currentPage + 1} of ${Math.ceil(list.length / wordsPerPage)}`;
+
+  // Save current page to localStorage
+  localStorage.setItem("currentPage", currentPage);
+
+  // Scroll to the top of the list for better UX
+  scrollToTop();
+}
+
+// Scroll to the Top of Vocabulary List
+function scrollToTop() {
+  vocabList.scrollTop = 0;
 }
 
 // Play Audio with Speed Adjustment
 function playAudio(word) {
+  // Initialize speed state for the word if not already done
+  if (!wordSpeedState[word]) {
+    wordSpeedState[word] = 0;
+  }
+
   const utterance = new SpeechSynthesisUtterance(word);
   utterance.lang = "en-US";
 
-  // Set speed based on the state
-  if (speedState === 0) {
-    utterance.rate = 1.0;
-    speedState = 1;
-  } else if (speedState === 1) {
-    utterance.rate = 0.25;
-    speedState = 2;
+  // Set speed based on the current word's state
+  if (wordSpeedState[word] === 0) {
+    utterance.rate = 1.0; // Normal speed
+    wordSpeedState[word] = 1;
+  } else if (wordSpeedState[word] === 1) {
+    utterance.rate = 0.25; // Slow speed
+    wordSpeedState[word] = 2;
   } else {
-    utterance.rate = 0.5;
-    speedState = 0;
+    utterance.rate = 0.5; // Slower speed
+    wordSpeedState[word] = 0; // Reset state
   }
 
   window.speechSynthesis.speak(utterance);
@@ -82,33 +101,14 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// Search Vocabulary
-searchBar.addEventListener("input", () => {
-  const query = searchBar.value.toLowerCase();
-  const filteredVocabulary = vocabulary.filter((item) =>
-    item.word.toLowerCase().includes(query)
+// Search Word
+function searchWord(query) {
+  const filteredWords = vocabulary.filter((item) =>
+    item.word.toLowerCase().includes(query.toLowerCase())
   );
-  renderFilteredVocabulary(filteredVocabulary);
-});
-
-function renderFilteredVocabulary(filteredVocabulary) {
-  vocabList.innerHTML = filteredVocabulary
-    .map(
-      (item) => `
-      <div class="vocab-item">
-        <span>${item.word}</span>
-        <span style="font-size: 14px; color: #555;">(${item.hindiMeaning})</span>
-        <button class="listen-btn" onclick="playAudio('${item.word}')">Listen</button>
-      </div>
-    `
-    )
-    .join("");
+  currentPage = 0; // Reset to first page for search
+  renderVocabulary(filteredWords);
 }
-
-// Dark Mode Toggle
-toggleDarkMode.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-});
 
 // Initial Render
 renderVocabulary();

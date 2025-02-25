@@ -9,13 +9,17 @@
 <body>
   <header>
     <h1>Vocabulary Learning App</h1>
-    <button id="dark-mode-toggle">Dark Mode</button>
   </header>
 
   <main>
     <section id="vocab-section">
-      <h2>Learn New Words</h2>
-      <input type="text" id="search-bar" placeholder="Search for a word..." />
+      <h2>Learn Vocabulary</h2>
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search for a word..."
+        oninput="searchWord(this.value)"
+      />
       <div id="vocab-list"></div>
       <div id="pagination">
         <button id="prev-btn">Previous</button>

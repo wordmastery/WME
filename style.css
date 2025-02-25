@@ -1,143 +1,121 @@
-/* General Styling */
+/* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
-  color: #212529;
   text-align: center;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 header {
-  background-color: #343a40;
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 20px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 24px;
-}
-
-header button {
-  background-color: #495057;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-header button:hover {
-  background-color: #adb5bd;
+  font-size: 26px;
 }
 
 main {
   padding: 20px;
 }
 
+#vocab-section h2 {
+  font-size: 22px;
+  color: #bb86fc;
+}
+
 #search-bar {
-  width: 70%;
-  padding: 12px;
-  border: 1px solid #ced4da;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #bb86fc;
   border-radius: 5px;
-  margin-bottom: 20px;
+  background-color: #1f1f1f;
+  color: #ffffff;
   font-size: 16px;
 }
 
 #vocab-list {
-  margin: 0 auto;
-  max-width: 700px;
+  margin: 20px auto;
+  max-width: 600px;
+  overflow-y: auto; /* Allow vertical scroll if content exceeds height */
+  max-height: 400px; /* Limit the height for better UI */
 }
 
 .vocab-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
-  border: 1px solid #dee2e6;
+  padding: 15px;
+  border: 1px solid #333333;
   border-radius: 8px;
-  padding: 10px 20px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .vocab-item span {
   font-size: 18px;
-  font-weight: bold;
-  text-align: left;
-  flex: 1;
+  font-weight: 500;
+  color: #e0e0e0;
 }
 
 .listen-btn {
-  background-color: #17a2b8;
-  color: white;
+  background-color: #bb86fc;
+  color: #121212;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 5px;
-  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .listen-btn:hover {
-  background-color: #138496;
+  background-color: #3700b3;
+  color: #ffffff;
 }
 
 #pagination {
-  margin-top: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 #pagination button {
-  background-color: #007bff;
-  color: white;
+  background-color: #bb86fc;
+  color: #121212;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 5px;
-  margin: 0 10px;
-  font-size: 14px;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 14px;
 }
 
 #pagination button:disabled {
-  background-color: #adb5bd;
+  background-color: #3a3a3a;
+  color: #757575;
   cursor: not-allowed;
 }
 
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 footer {
-  background-color: #343a40;
-  color: white;
+  background-color: #1f1f1f;
+  color: #ffffff;
   padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
   font-size: 14px;
-}
-
-/* Dark Mode */
-body.dark-mode {
-  background-color: #212529;
-  color: #f8f9fa;
-}
-
-body.dark-mode header {
-  background-color: #495057;
-}
-
-body.dark-mode .vocab-item {
-  background-color: #343a40;
-  color: #f8f9fa;
-}
-
-body.dark-mode button {
-  background-color: #6c757d;
-  color: white;
+  z-index: 1000; /* Ensure footer stays above content */
 }
