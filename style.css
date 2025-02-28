@@ -6,8 +6,12 @@ body {
   text-align: center;
   background-color: #121212;
   color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header */
 header {
   background-color: #1f1f1f;
   color: red;
@@ -19,10 +23,13 @@ header h1 {
   font-size: 26px;
 }
 
+/* Main Content */
 main {
   padding: 20px;
+  flex: 1; /* Ensures the main content takes available space */
 }
 
+/* Vocabulary Section */
 #vocab-section h2 {
   font-size: 22px;
   color: #bb86fc;
@@ -80,12 +87,15 @@ main {
   color: #ffffff;
 }
 
+/* Pagination */
 #pagination {
-  margin: 20px 0;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  position: relative; /* Keeps it within the layout */
+  bottom: 20px; /* Adds spacing above footer */
 }
 
 #pagination button {
@@ -104,18 +114,18 @@ main {
   cursor: not-allowed;
 }
 
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
+/* Footer */
 footer {
   background-color: #1f1f1f;
   color: #ffffff;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   font-size: 14px;
-  z-index: 1000; /* Ensure footer stays above content */
+  z-index: 1000; /* Ensures footer stays above content */
+  position: relative; /* Allows it to adapt dynamically */
+  width: 100%;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulary Learning App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Vocabulary Learning App</h1>
+    <nav>
+      <a href="#practice-section">Practice</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Vocabulary Section -->
+    <section id="vocab-section">
+      <h2>Learn Vocabulary</h2>
+      <div id="vocab-list"></div>
+      <div id="pagination">
+        <button id="prev-btn">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-btn">Next</button>
+      </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice-section">
+      <h2>Word Practice</h2>
+      <div id="quiz-area">
+        <p id="question"></p>
+        <div id="options"></div>
+        <button id="next-question">Next</button>
+      </div>
+      <p id="result"></p>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+      <h2>User Dashboard</h2>
+      <div id="user-info"></div>
+      <div id="progress">
+        <h3>Progress</h3>
+        <p>Words Learned: <span id="words-learned">0</span></p>
+        <p>Quiz Accuracy: <span id="quiz-accuracy">0%</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vocabulary Learning App</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
