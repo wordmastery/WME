@@ -119,7 +119,17 @@
     {"word": "When him ", "hindiMeaning": "जब इनको" },
     {"word": "When her ", "hindiMeaning": "जब उनको" },
     {"word": "When all ", "hindiMeaning": "जब सब/जब सबका" },
-    {"word": "As soon as ", "hindiMeaning": "जैसे ही " }
+    {"word": "As soon as ", "hindiMeaning": "जैसे ही " },
+    {"word": "From where", "hindiMeaning": "कहीं से" },
+    {"word": "From any where", "hindiMeaning": "कहीं न कहीं" },
+    {"word": "From nowhere", "hindiMeaning": "कहीं से भी नही" },
+    {"word": "At some place", "hindiMeaning": "कहीं पे" },
+    {"word": "From anywhere", "hindiMeaning": "कहीं से भी" },
+    {"word": "Who", "hindiMeaning": "कौन" },
+    {"word": "Which one", "hindiMeaning": "कौन सा/कौन सी" },
+    {"word": "From whom", "hindiMeaning": "किनसे" },
+    {"word": "To whom", "hindiMeaning": "किनको" },
+    {"word": "For whom", "hindiMeaning": "किसके लिए" }
     
     
   ]
