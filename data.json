@@ -129,7 +129,31 @@
     {"word": "Which one", "hindiMeaning": "कौन सा/कौन सी" },
     {"word": "From whom", "hindiMeaning": "किनसे" },
     {"word": "To whom", "hindiMeaning": "किनको" },
-    {"word": "For whom", "hindiMeaning": "किसके लिए" }
+    {"word": "For whom", "hindiMeaning": "किसके लिए" },
+    {"word": "To whom", "hindiMeaning": "किसे" },
+    {"word": "Who is", "hindiMeaning": "कौन है" },
+    {"word": "Who was", "hindiMeaning": "कौन था" },
+    {"word": "Who knows", "hindiMeaning": "कौन जाने" },
+    {"word": "Whose", "hindiMeaning": "किसका" },
+    {"word": "For whom", "hindiMeaning": "किसके खातिर" },
+    {"word": "For what reason", "hindiMeaning": "किस कारण से" },
+    {"word": "For which", "hindiMeaning": "किसलिए" },
+    {"word": "Anytime", "hindiMeaning": "कभी न कभी" },
+    {"word": "His", "hindiMeaning": "उसका" },
+    {"word": "Her", "hindiMeaning": "उसकी" },
+    {"word": "For him", "hindiMeaning": "उनके लिए" },
+    {"word": "He", "hindiMeaning": "उन्होंने" },
+    {"word": "She", "hindiMeaning": "उन्होंने" },
+    {"word": "Him", "hindiMeaning": "उनसे" },
+    {"word": "Her", "hindiMeaning": "उनसे" },
+    {"word": "Those days", "hindiMeaning": "उन्हीं दिनों" },
+    {"word": "Because of that reason", "hindiMeaning": "उसी कारण से" },
+    {"word": "Because of those reasons", "hindiMeaning": "उन्हीं कारणों से" },
+    {"word": "Then", "hindiMeaning": "जब जाके/तब जाके" },
+    {"word": "When we", "hindiMeaning": "जब हम" },
+    {"word": "When you", "hindiMeaning": "जब तुम" },
+    {"word": "When I", "hindiMeaning": "जब मैं" }
+    
     
     
   ]
