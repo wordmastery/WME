@@ -318,10 +318,38 @@
     {"word": "Its", "hindiMeaning": "उसका" },
     {"word": "We all", "hindiMeaning": "हम सब" },
     {"word": "For me", "hindiMeaning": "मेरे लिए" },
-    {"word": "For you", "hindiMeaning": "तुम्हारे लिए" }
+    {"word": "For you", "hindiMeaning": "तुम्हारे लिए" },
+    {"word": "Only for", "hindiMeaning": "सिर्फ तुम्हारे लिए" },{"word": "Is", "hindiMeaning": "है" },
+    {"word": "Are", "hindiMeaning": "हैं" },
+    {"word": "Was", "hindiMeaning": "था" },
+    {"word": "Were", "hindiMeaning": "थे" },
+    {"word": "Whether", "hindiMeaning": "चाहे/ये" },
+    {"word": "Till", "hindiMeaning": "तब/जब तक" },
+    {"word": "Until", "hindiMeaning": "तब तक नही" },
+    {"word": "Unless", "hindiMeaning": "बिना/जब तक/अन्यथा" },
+    {"word": "Later on", "hindiMeaning": "बाद में" },
+    {"word": "No sooner did", "hindiMeaning": "ज्यों ही/ जैसे ही" },
+    {"word": "Scarcely", "hindiMeaning": "अभी ही/ मुश्किल से" },
+    {"word": "Otherwise", "hindiMeaning": "अन्यथा" },
+    {"word": "While", "hindiMeaning": "जब/ के क्षण/ के पल" },
+    {"word": "Though", "hindiMeaning": "तू" },
+    {"word": "Yet", "hindiMeaning": "तथापि/इस समय/ तो भी" },
+    {"word": "Hardly", "hindiMeaning": "मुश्किल से ही था" },
+    {"word": "After", "hindiMeaning": "बाद में" },
+    {"word": "Before", "hindiMeaning": "पहले/ के पहले" },
+    {"word": "As soon as", "hindiMeaning": "जैसे ही/ त्यों ही" },
+    {"word": "As long as", "hindiMeaning": "जब तक" },
+    {"word": "Although", "hindiMeaning": "यद्दपी" },
+    {"word": "As far as", "hindiMeaning": "जहा तक" },
+    {"word": "Rather than", "hindiMeaning": "अपेक्षा" },
+    {"word": "So that", "hindiMeaning": "ताकि" },
+    {"word": "Too", "hindiMeaning": "बेहद" },
+    {"word": "So", "hindiMeaning": "इसलिए" },
+    {"word": "Not only", "hindiMeaning": "ही नहीं/ केवल ही नही/ न केवल" },
+    {"word": "Should be", "hindiMeaning": "होना चाहिए" },
+    {"word": "", "hindiMeaning": "" }
+    
 
-    
-    
     
     
   ]
