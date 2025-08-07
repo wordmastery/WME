@@ -1,0 +1,24 @@
+{
+  "verbs": [
+    {
+      "baseForm": "go",
+      "pastSimple": "went",
+      "pastParticiple": "gone",
+      "hindiMeaning": "जाना",
+      "examples": [
+        "I go to school every day → मैं रोज स्कूल जाता हूँ",
+        "She went to the market → वह बाजार गई"
+      ]
+    },
+    {
+      "baseForm": "eat",
+      "pastSimple": "ate",
+      "pastParticiple": "eaten",
+      "hindiMeaning": "खाना",
+      "examples": [
+        "We eat breakfast at 8 → हम 8 बजे नाश्ता खाते हैं",
+        "He ate all the cookies → उसने सभी बिस्कुट खा लिए"
+      ]
+    }
+  ]
+}

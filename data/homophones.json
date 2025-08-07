@@ -1,0 +1,20 @@
+{
+  "homophones": [
+    {
+      "words": ["flower", "flour"],
+      "hindiMeanings": ["फूल", "आटा"],
+      "examples": [
+        "She loves red flowers → उसे लाल फूल पसंद हैं",
+        "We need flour to make bread → हमें रोटी बनाने के लिए आटा चाहिए"
+      ]
+    },
+    {
+      "words": ["peace", "piece"],
+      "hindiMeanings": ["शांति", "टुकड़ा"],
+      "examples": [
+        "World peace is important → विश्व शांति महत्वपूर्ण है",
+        "Can I have a piece of cake? → क्या मुझे केक का एक टुकड़ा मिल सकता है?"
+      ]
+    }
+  ]
+}
