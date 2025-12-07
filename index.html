@@ -1,250 +1,210 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   BagsStyle - Stylish Bags for Every Occasion
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-  #logo{
-  filter: invert(100%);
-}
-  
-   body {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
- </head>
- <body class="bg-gray-50 text-gray-800">
-  <header class="bg-white shadow-md sticky top-0 z-50">
-   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bagsstyle – Bulk Bag Manufacturing</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+
+<!-- HEADER -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
     <div class="flex items-center space-x-3">
-     <img id="logo" alt="BagsStyle logo with stylized letters BS in black on white background" class="w-12 h-12" height="48" src="./src/img/logo.png" width="48"/>
-     
+      <i data-lucide="shopping-bag" class="w-10 h-10 text-indigo-600"></i>
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900">Bagsstyle</h1>
+        <p class="text-sm text-gray-600">Premium Bulk Bag Manufacturing</p>
+      </div>
     </div>
-    <nav class="hidden md:flex space-x-8 font-medium text-gray-700">
-     <a class="hover:text-indigo-600 transition" href="#home">
-      Home
-     </a>
-     <a class="hover:text-indigo-600 transition" href="#products">
-      Products
-     </a>
-     <a class="hover:text-indigo-600 transition" href="#about">
-      About
-     </a>
-     <a class="hover:text-indigo-600 transition" href="#contact">
-      Contact
-     </a>
-    </nav>
-    <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="menu-btn">
-     <i class="fas fa-bars fa-lg">
-     </i>
-    </button>
-   </div>
-   <nav aria-label="Mobile menu" class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
-    <a class="block px-6 py-3 border-b border-gray-200 hover:bg-indigo-50 transition" href="#home">
-     Home
-    </a>
-    <a class="block px-6 py-3 border-b border-gray-200 hover:bg-indigo-50 transition" href="#products">
-     Products
-    </a>
-    <a class="block px-6 py-3 border-b border-gray-200 hover:bg-indigo-50 transition" href="#about">
-     About
-    </a>
-    <a class="block px-6 py-3 hover:bg-indigo-50 transition" href="#contact">
-     Contact
-    </a>
-   </nav>
-  </header>
-  <main>
-   <section class="relative bg-indigo-600 text-white pt-20 pb-32 px-6 sm:px-12 md:px-20 lg:px-32" id="home">
-    <div class="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-12">
-     <div class="md:w-1/2 text-center md:text-left">
-      <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
-       Stylish Bags for Every Occasion
-      </h2>
-      <p class="text-lg sm:text-xl mb-8">
-       Discover premium quality bags crafted with style and durability.
-            Perfect for work, travel, and everyday use.
-      </p>
-      <a class="inline-block bg-white text-indigo-600 font-semibold px-8 py-3 rounded-md shadow-md hover:bg-gray-100 transition" href="#contact">
-       Contact Us
-      </a>
-     </div>
-     <div class="md:w-1/2">
-      <img alt="A stylish modern leather bag placed on a clean white background, showcasing its design and texture" class="rounded-lg shadow-lg mx-auto md:mx-0" height="400" src="https://storage.googleapis.com/a1aa/image/da569e3b-5bc8-4891-3235-d4ea806e624b.jpg" width="600"/>
-     </div>
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#products" class="text-gray-700 hover:text-indigo-600 transition">Products</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+      <a href="#contact" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Contact Us</a>
     </div>
-    <img alt="Decorative horizontal pattern with BagsStyle logo and bag icons in white and light indigo shades" class="absolute bottom-0 left-0 w-full opacity-20 pointer-events-none select-none" height="200" src="https://storage.googleapis.com/a1aa/image/22536b32-86a7-4a48-4c8e-e8f8934e02ab.jpg" width="1200"/>
-   </section>
-   <section class="max-w-7xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 py-20" id="products">
-    <h3 class="text-3xl font-semibold text-center mb-12 text-indigo-700">
-     Our Popular Bags
-    </h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10" role="list">
-     <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-      <img alt="Classic brown leather backpack with multiple compartments and adjustable straps on a white background" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/777bbb79-5bb1-4991-9ac1-fcaeceedf7b0.jpg" width="400"/>
-      <div class="p-6">
-       <h4 class="text-xl font-semibold mb-2">
-        Classic Leather Backpack
-       </h4>
-       <p class="text-gray-600 mb-4">
-        Durable and stylish backpack perfect for daily use and travel.
-       </p>
-       <span class="text-indigo-600 font-bold text-lg">
-        ₹3,499
-       </span>
-      </div>
-     </article>
-     <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-      <img alt="Elegant black tote bag with gold accents and spacious interior on a white background" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/d2493e3d-f376-4a7b-bbb9-aa565dc7645c.jpg" width="400"/>
-      <div class="p-6">
-       <h4 class="text-xl font-semibold mb-2">
-        Elegant Tote Bag
-       </h4>
-       <p class="text-gray-600 mb-4">
-        Spacious tote bag designed for work and casual outings.
-       </p>
-       <span class="text-indigo-600 font-bold text-lg">
-        ₹2,799
-       </span>
-      </div>
-     </article>
-     <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-      <img alt="Compact red crossbody bag with adjustable strap and zipper closure on a white background" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/bc4af33f-094f-41aa-5834-d8afe3d3449b.jpg" width="400"/>
-      <div class="p-6">
-       <h4 class="text-xl font-semibold mb-2">
-        Compact Crossbody Bag
-       </h4>
-       <p class="text-gray-600 mb-4">
-        Lightweight and convenient bag for hands-free style.
-       </p>
-       <span class="text-indigo-600 font-bold text-lg">
-        ₹1,999
-       </span>
-      </div>
-     </article>
-     <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-      <img alt="Large navy blue travel duffel bag with multiple pockets and sturdy handles on a white background" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/ad9c278b-511b-4c7e-6f39-bf465bcdc913.jpg" width="400"/>
-      <div class="p-6">
-       <h4 class="text-xl font-semibold mb-2">
-        Travel Duffel Bag
-       </h4>
-       <p class="text-gray-600 mb-4">
-        Perfect companion for weekend trips and gym sessions.
-       </p>
-       <span class="text-indigo-600 font-bold text-lg">
-        ₹4,299
-       </span>
-      </div>
-     </article>
-     <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-      <img alt="Stylish brown messenger bag with flap closure and adjustable strap on a white background" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/4b748e6d-d13a-41be-db22-fbfcfcaa42a7.jpg" width="400"/>
-      <div class="p-6">
-       <h4 class="text-xl font-semibold mb-2">
-        Stylish Messenger Bag
-       </h4>
-       <p class="text-gray-600 mb-4">
-        Classic design for professionals on the go.
-       </p>
-       <span class="text-indigo-600 font-bold text-lg">
-        ₹3,199
-       </span>
-      </div>
-     </article>
-     <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-      <img alt="Elegant red clutch bag with gold chain strap and sleek design on a white background" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/d056a87f-9a9c-47d5-d404-f2faa8923873.jpg" width="400"/>
-      <div class="p-6">
-       <h4 class="text-xl font-semibold mb-2">
-        Elegant Clutch Bag
-       </h4>
-       <p class="text-gray-600 mb-4">
-        Perfect accessory for evening events and parties.
-       </p>
-       <span class="text-indigo-600 font-bold text-lg">
-        ₹1,499
-       </span>
-      </div>
-     </article>
-    </div>
-   </section>
-   <section class="bg-white py-20 px-6 sm:px-12 md:px-20 lg:px-32 max-w-7xl mx-auto" id="about">
-    <h3 class="text-3xl font-semibold text-indigo-700 mb-8 text-center">
-     About BagsStyle
-    </h3>
-    <div class="flex flex-col md:flex-row items-center gap-12">
-     <img alt="Craftsman handcrafting a leather bag with tools and leather pieces on a wooden workbench" class="rounded-lg shadow-lg w-full md:w-1/2 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/b7f2065f-5372-4a02-4f17-09d65ae1e772.jpg" width="500"/>
-     <div class="md:w-1/2 text-gray-700 text-lg leading-relaxed">
-      <p class="mb-4">
-       At BagsStyle, we believe in combining style with functionality. Our
-            bags are handcrafted by skilled artisans using premium materials to
-            ensure durability and elegance.
-      </p>
-      <p>
-       Whether you need a bag for work, travel, or special occasions, our
-            collection offers something for everyone. We are committed to
-            providing excellent customer service and high-quality products.
-      </p>
-     </div>
-    </div>
-   </section>
-   <section class="bg-indigo-50 py-20 px-6 sm:px-12 md:px-20 lg:px-32 max-w-7xl mx-auto" id="contact">
-    <h3 class="text-3xl font-semibold text-indigo-700 mb-8 text-center">
-     Contact Us
-    </h3>
+  </div>
+</header>
 
-    <div class="max-w-3xl mx-auto mt-12 text-center text-gray-700 space-y-4">
-     <p>
-      <i class="fas fa-phone-alt text-indigo-600 mr-2">
-      </i>
-      +91 98765 43210
-     </p>
-     <p>
-      <i class="fas fa-envelope text-indigo-600 mr-2">
-      </i>
-      contact@bagsstyle.com
-     </p>
-     <p>
-      <i class="fas fa-map-marker-alt text-indigo-600 mr-2">
-      </i>
-      123 Bag
-          Street, Mumbai, India
-     </p>
+<!-- HERO -->
+<section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 text-center">
+  <h2 class="text-5xl font-bold mb-6">Your Trusted Partner in Bulk Bag Manufacturing</h2>
+  <p class="text-xl mb-8 max-w-3xl mx-auto">From schools to jewelry shops, we create custom bags for every business need across India</p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="#contact" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center">
+      Get a Quote <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+    </a>
+    <a href="https://wa.me/917903433690" target="_blank"
+       class="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-600 transition inline-flex items-center justify-center">
+      <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i> WhatsApp Us
+    </a>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="py-16 bg-white">
+  <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Bagsstyle?</h3>
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
+      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="factory" class="w-8 h-8"></i></div>
+      <h4 class="text-xl font-semibold mb-2 text-gray-900">Own Manufacturing</h4>
+      <p class="text-gray-600">Complete control over quality</p>
     </div>
-   </section>
-  </main>
-  <footer class="bg-white border-t border-gray-200 py-6 mt-20">
-   <div class="max-w-7xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
-    <p>
-     © 2024 BagsStyle. All rights reserved.
+    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
+      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="users" class="w-8 h-8"></i></div>
+      <h4 class="text-xl font-semibold mb-2 text-gray-900">Bulk Orders</h4>
+      <p class="text-gray-600">Specialized in large quantities</p>
+    </div>
+    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
+      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="package" class="w-8 h-8"></i></div>
+      <h4 class="text-xl font-semibold mb-2 text-gray-900">Custom Solutions</h4>
+      <p class="text-gray-600">Made exactly as per requirements</p>
+    </div>
+    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
+      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="check-circle" class="w-8 h-8"></i></div>
+      <h4 class="text-xl font-semibold mb-2 text-gray-900">Pan-India Service</h4>
+      <p class="text-gray-600">Clients all across India</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="py-16 bg-slate-50">
+  <h3 class="text-3xl font-bold text-center mb-4 text-gray-900">Our Product Range</h3>
+  <p class="text-center text-gray-600 mb-12">We manufacture all types of bags tailored for business</p>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+    <script>
+      const bagTypes = [
+        { icon: "🎒", name: "School Bags", desc: "Durable bags for educational institutions" },
+        { icon: "🛍️", name: "Shopping Bags", desc: "Eco-friendly retail bags" },
+        { icon: "💎", name: "Jewelry Pouches", desc: "Premium pouches for jewelry shops" },
+        { icon: "💼", name: "Corporate Bags", desc: "Branded bags for businesses" },
+        { icon: "👜", name: "Tote Bags", desc: "Versatile bags for various uses" },
+        { icon: "✨", name: "Custom Bags", desc: "Tailored bag solutions" }
+      ];
+      document.write(
+        bagTypes.map(b =>
+          `<div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition text-center">
+            <div class='text-5xl mb-4'>${b.icon}</div>
+            <h4 class='text-2xl font-semibold mb-3 text-gray-900'>${b.name}</h4>
+            <p class='text-gray-600'>${b.desc}</p>
+          </div>`
+        ).join("")
+      );
+    </script>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-16 bg-white">
+  <div class="max-w-3xl mx-auto text-center px-4">
+    <h3 class="text-3xl font-bold mb-6 text-gray-900">About Bagsstyle</h3>
+    <p class="text-lg text-gray-700 mb-6">
+      We are a leading bag manufacturing factory specializing in bulk orders for businesses across India.
     </p>
-    <div class="flex space-x-6 mt-4 md:mt-0">
-     <a aria-label="Facebook" class="text-gray-600 hover:text-indigo-600 transition" href="https://facebook.com/bagsstyle" rel="noopener noreferrer" target="_blank">
-      <i class="fab fa-facebook-f fa-lg">
-      </i>
-     </a>
-     <a aria-label="Instagram" class="text-gray-600 hover:text-indigo-600 transition" href="https://instagram.com/bagsstyle" rel="noopener noreferrer" target="_blank">
-      <i class="fab fa-instagram fa-lg">
-      </i>
-     </a>
-     <a aria-label="Twitter" class="text-gray-600 hover:text-indigo-600 transition" href="https://twitter.com/bagsstyle" rel="noopener noreferrer" target="_blank">
-      <i class="fab fa-twitter fa-lg">
-      </i>
-     </a>
-    </div>
-   </div>
-  </footer>
-  <script>
-   const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    <p class="text-lg text-gray-700">
+      With our own facility, we ensure quality, competitive pricing and timely delivery.
+    </p>
+  </div>
+</section>
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
- </body>
+<!-- CONTACT -->
+<section id="contact" class="py-16 bg-slate-100">
+  <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">Get in Touch</h3>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-4">
+
+    <!-- Contact Details -->
+    <div>
+      <h4 class="text-2xl font-semibold mb-6 text-gray-900">Contact Information</h4>
+      <p><strong>Email:</strong> <a href="mailto:workforarshad@gmail.com" class="text-indigo-600">workforarshad@gmail.com</a></p>
+      <p class="mt-4"><strong>Phone:</strong> <a href="tel:+917903433690" class="text-indigo-600">+91 7903433690</a></p>
+      <p class="mt-4"><strong>WhatsApp:</strong> <a href="https://wa.me/917903433690" target="_blank" class="text-green-600">+91 7903433690</a></p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bg-white p-8 rounded-xl shadow-md">
+      <h4 class="text-2xl font-semibold mb-6 text-gray-900">Request a Quote</h4>
+
+      <div class="space-y-4">
+        <input id="name" placeholder="Name *" class="input">
+        <input id="email" placeholder="Email *" class="input">
+        <input id="phone" placeholder="Phone *" class="input">
+        <input id="organization" placeholder="Organization" class="input">
+        <select id="bagType" class="input">
+          <option value="">Select Bag Type</option>
+        </select>
+        <input id="quantity" placeholder="Quantity (e.g. 500 units)" class="input">
+        <textarea id="message" rows="3" placeholder="Message" class="input"></textarea>
+        <button onclick="sendMail()" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">Send Inquiry</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-8 text-center">
+  <div class="flex justify-center items-center space-x-2">
+    <i data-lucide="shopping-bag" class="w-8 h-8"></i>
+    <h5 class="text-2xl font-bold">Bagsstyle</h5>
+  </div>
+  <p class="text-gray-400 mt-2">Premium Bulk Bag Manufacturing Across India</p>
+  <p class="text-gray-500 text-sm mt-2">© 2024 Bagsstyle</p>
+</footer>
+
+<!-- 🔥 FINAL SCRIPT WITH WHATSAPP INTEGRATION -->
+<script>
+  // Style input fields
+  document.querySelectorAll(".input").forEach(el =>
+    el.classList.add("w-full","px-4","py-2","border","border-gray-300","rounded-lg","focus:ring-2","focus:ring-indigo-500")
+  );
+
+  // Bag type dropdown
+  bagTypes.forEach(b =>
+    document.getElementById("bagType").innerHTML += `<option value="${b.name}">${b.name}</option>`
+  );
+
+  // SEND TO WHATSAPP FUNCTION
+  function sendMail() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const organization = document.getElementById("organization").value;
+    const bagType = document.getElementById("bagType").value;
+    const quantity = document.getElementById("quantity").value;
+    const message = document.getElementById("message").value;
+
+    if (!name || !email || !phone) {
+      alert("Please fill required fields!");
+      return;
+    }
+
+    const whatsappMessage =
+      `🛍️ *New Bag Inquiry Received*\n\n` +
+      `👤 *Name:* ${name}\n` +
+      `📩 *Email:* ${email}\n` +
+      `📞 *Phone:* ${phone}\n` +
+      `🏢 *Organization:* ${organization}\n` +
+      `👜 *Bag Type:* ${bagType}\n` +
+      `📦 *Quantity:* ${quantity}\n` +
+      `📝 *Message:* ${message}`;
+
+    const whatsappNumber = "917903433690";
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+      "_blank"
+    );
+  }
+
+  lucide.createIcons();
+</script>
+
+</body>
 </html>
