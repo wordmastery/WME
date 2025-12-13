@@ -1,254 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasySpeakUp - Free Edition</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        textarea::-webkit-scrollbar { width: 8px; }
-        textarea::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
-        textarea::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        textarea::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-        .fade-in { animation: fadeIn 0.5s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
+  <meta charset="UTF-8">
+  <title>EasySpeakUp – Dialogue Preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-teal-50 via-blue-50 to-indigo-50 min-h-screen text-slate-800 py-8 px-4">
 
-    <div class="max-w-3xl mx-auto space-y-8">
-
-        <header class="text-center space-y-2">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-blue-600 to-indigo-600 tracking-tight">
-                🎙️ EasySpeakUp Free
-            </h1>
-            <p class="text-slate-500 font-medium">Aarav: line → Sara: line | Unlimited Free MP3 Download</p>
-            <div class="inline-block bg-teal-100 text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                No API Key Required • Instant Use
-            </div>
-        </header>
-
-        <section class="bg-white rounded-2xl shadow-lg border border-white/50 p-6">
-            <label class="block text-sm font-bold text-slate-700 mb-3 uppercase tracking-wider">
-                Dialogue Script <span class="text-slate-400 font-normal normal-case">(Format: Name: Message)</span>
-            </label>
-            <textarea id="dialogueInput" rows="6" class="block p-4 w-full text-sm text-slate-900 bg-slate-50 rounded-lg border border-slate-300 focus:ring-teal-500 focus:border-teal-500 shadow-inner" placeholder="Paste your script here...">
-Aarav: Hi, excuse me... is this seat taken?
+<body class="bg-gradient-to-br from-amber-50 via-rose-50 to-indigo-50 min-h-screen">
+  <div class="max-w-4xl mx-auto p-4 md:p-6 lg:p-8">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 bg-clip-text text-transparent mb-2 drop-shadow">
+        🎙️ Dialogue Voice Preview
+      </h1>
+      <p class="text-gray-700 font-semibold text-base md:text-lg">
+        Aarav: line → Sara: line | System voice only (no download)
+      </p>
+      <div class="mt-3 bg-gradient-to-r from-emerald-100 to-green-100 p-3 rounded-2xl text-xs font-bold text-emerald-800 shadow">
+        100% Free • No API • Speed + pitch + realistic gap
+      </div>
+    </div>
+    
+    <!-- Script input -->
+    <div class="bg-white/80 p-6 rounded-3xl shadow-xl border border-white/60 mb-6 backdrop-blur-sm hover:shadow-2xl hover:-translate-y-0.5 transition">
+      <label class="block text-xl font-bold text-center mb-3">
+        Dialogue Script (Aarav: / Sara: format)
+      </label>
+      <textarea id="script" rows="8" class="w-full p-4 border-2 border-gray-200 rounded-2xl text-base md:text-lg min-h-[220px] md:min-h-[260px]">
+Aarav: Hi, excuse me… is this seat taken?
 Sara: Oh no, you can sit here.
 Aarav: Thank you so much.
-Sara: You're welcome!
-            </textarea>
-        </section>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-blue-500">
-                <label class="block mb-2 text-sm font-bold text-slate-700">👨 Aarav (Male Voice)</label>
-                <select id="voiceMale" class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                    <option value="Brian" selected>Brian (British - Famous Voice)</option>
-                    <option value="Joey">Joey (American - Natural)</option>
-                    <option value="Matthew">Matthew (American - Deep)</option>
-                    <option value="Aditi">Aditi (Indian Accent - Male/Neutral)</option>
-                </select>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-rose-500">
-                <label class="block mb-2 text-sm font-bold text-slate-700">👩 Sara (Female Voice)</label>
-                <select id="voiceFemale" class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5">
-                    <option value="Amy" selected>Amy (British - Soft)</option>
-                    <option value="Salli">Salli (American - Clear)</option>
-                    <option value="Joanna">Joanna (American - Warm)</option>
-                    <option value="Aditi">Aditi (Indian Accent - Female)</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col justify-center max-w-sm mx-auto">
-            <label class="text-xs font-bold text-slate-500 uppercase mb-2">Speaker Filter</label>
-            <select id="speakerMode" class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2">
-                <option value="both" selected>Both (Full Dialogue)</option>
-                <option value="aarav">Only Aarav's Lines</option>
-                <option value="sara">Only Sara's Lines</option>
-            </select>
-            <p class="text-xs text-slate-400 mt-2 text-center">Note: Talking Speed is fixed in the free version.</p>
-        </div>
-
-        <div id="statusArea" class="hidden rounded-lg bg-blue-100 p-3 text-blue-800 text-sm font-medium text-center animate-pulse">
-            ⏳ Processing... please wait...
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4 pt-2">
-            <button onclick="processDialogue('preview')" class="flex-1 bg-white border-2 border-teal-600 text-teal-700 hover:bg-teal-50 focus:ring-4 focus:ring-teal-300 font-bold rounded-xl text-lg px-5 py-3 transition-transform active:scale-95 shadow-sm flex items-center justify-center gap-2">
-                <span>▶️</span> Preview Dialogue
-            </button>
-            <button onclick="processDialogue('download')" class="flex-1 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-xl text-lg px-5 py-3 transition-transform active:scale-95 shadow-lg flex items-center justify-center gap-2">
-                <span>💾</span> Generate MP3
-            </button>
-        </div>
-
-        <div id="previewArea" class="hidden space-y-4 pt-6 border-t border-slate-200">
-            <h3 class="text-lg font-bold text-slate-700">Live Transcript</h3>
-            <div id="chatContainer" class="space-y-3">
-                </div>
-        </div>
-
-        <div id="downloadArea" class="hidden bg-green-50 border border-green-200 rounded-xl p-6 text-center space-y-4 fade-in">
-            <div class="text-green-700 font-bold text-lg flex items-center justify-center gap-2">
-                ✅ Audio Ready!
-            </div>
-            <audio id="finalAudioPlayer" controls class="w-full h-10"></audio>
-            <a id="downloadLink" href="#" download="dialogue.mp3" class="inline-block w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition-colors">
-                Download MP3 File
-            </a>
-        </div>
-        
-        <div class="h-10"></div>
+Sara: You’re welcome!
+Aarav: What’s your name?
+Sara: I’m Sara, nice to meet you!</textarea>
     </div>
-
-    <script>
-        // Using StreamElements Public API (Free, No Key)
-        // Endpoint: https://api.streamelements.com/kappa/v2/speech?voice=Brian&text=Hello
+    
+    <!-- Voice selects -->
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <div class="bg-blue-50/90 p-4 rounded-2xl shadow-xl border border-white/60 backdrop-blur-sm hover:shadow-2xl hover:-translate-y-0.5 transition">
+        <h3 class="font-bold mb-2 flex items-center text-blue-800">
+          <span class="mr-2 text-2xl">👨</span> Aarav (Male voice)
+        </h3>
+        <select id="maleVoice" class="w-full border rounded-lg p-2 text-sm"></select>
+      </div>
+      <div class="bg-pink-50/90 p-4 rounded-2xl shadow-xl border border-white/60 backdrop-blur-sm hover:shadow-2xl hover:-translate-y-0.5 transition">
+        <h3 class="font-bold mb-2 flex items-center text-pink-800">
+          <span class="mr-2 text-2xl">👩</span> Sara (Female voice)
+        </h3>
+        <select id="femaleVoice" class="w-full border rounded-lg p-2 text-sm"></select>
+      </div>
+    </div>
+    
+    <!-- Speaker mode -->
+    <div class="bg-white/80 p-3 rounded-2xl shadow-xl border border-white/60 mb-4 flex flex-wrap gap-3 items-center backdrop-blur-sm">
+      <span class="font-semibold text-sm">Who should speak?</span>
+      <select id="mode" class="border rounded-lg p-2 text-sm">
+        <option value="both">Aarav + Sara (dialogue)</option>
+        <option value="aarav">Only Aarav (single male)</option>
+        <option value="sara">Only Sara (single female)</option>
+      </select>
+    </div>
+    
+    <!-- Speed controls -->
+    <div class="bg-white/80 p-3 rounded-2xl shadow-xl border border-white/60 mb-6 flex flex-wrap gap-2 items-center justify-center backdrop-blur-sm">
+      <span class="font-semibold text-sm mr-2">Speed:</span>
+      <button class="speed px-3 py-1 rounded-full bg-slate-200 text-xs" data-rate="0.6">Extra slow</button>
+      <button class="speed px-3 py-1 rounded-full bg-slate-200 text-xs" data-rate="0.85">Slow</button>
+      <button class="speed px-3 py-1 rounded-full bg-indigo-600 text-white text-xs" data-rate="1">Normal</button>
+      <button class="speed px-3 py-1 rounded-full bg-slate-200 text-xs" data-rate="1.15">Fast</button>
+    </div>
+    
+    <!-- Button -->
+    <div class="flex flex-col sm:flex-row gap-4 mb-6">
+      <button id="previewBtn" class="w-full sm:flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 rounded-3xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition">
+        ▶️ Preview Dialogue
+      </button>
+    </div>
+    
+    <!-- Preview -->
+    <div id="previewBox" class="hidden bg-white/90 p-4 rounded-3xl shadow-xl border border-white/60 mb-4 backdrop-blur-sm">
+      <h3 class="font-bold text-emerald-800 mb-3 text-center text-lg">🎬 Live Preview</h3>
+      <div id="lines" class="space-y-2 text-base"></div>
+    </div>
+    
+    <!-- Status -->
+    <div id="status" class="hidden text-center p-3 rounded-3xl text-xs font-mono mb-4"></div>
+  </div>
+  
+  <script>
+    const scriptBox = document.getElementById('script');
+    const maleSelect = document.getElementById('maleVoice');
+    const femaleSelect = document.getElementById('femaleVoice');
+    const modeSelect = document.getElementById('mode');
+    const previewBtn = document.getElementById('previewBtn');
+    const statusBox = document.getElementById('status');
+    const previewBox = document.getElementById('previewBox');
+    const linesBox = document.getElementById('lines');
+    
+    let currentRate = 1;
+    
+    function showStatus(msg, type) {
+      const base = 'text-center p-3 rounded-3xl text-xs font-mono mb-4 ';
+      if (type === 'error') statusBox.className = base + 'bg-red-100 text-red-800';
+      else if (type === 'ok') statusBox.className = base + 'bg-emerald-100 text-emerald-800';
+      else statusBox.className = base + 'bg-blue-100 text-blue-800';
+      statusBox.textContent = msg;
+      statusBox.classList.remove('hidden');
+    }
+    
+    // Speed buttons
+    document.querySelectorAll('.speed').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentRate = parseFloat(btn.dataset.rate);
+        document.querySelectorAll('.speed').forEach(b => {
+          b.classList.remove('bg-indigo-600', 'text-white');
+          b.classList.add('bg-slate-200', 'text-black');
+        });
+        btn.classList.add('bg-indigo-600', 'text-white');
+        btn.classList.remove('bg-slate-200', 'text-black');
+      });
+    });
+    
+    // Load system voices
+    function loadVoices() {
+      const voices = window.speechSynthesis.getVoices();
+      maleSelect.innerHTML = '';
+      femaleSelect.innerHTML = '';
+      voices.forEach(v => {
+        const o1 = document.createElement('option');
+        o1.value = v.name;
+        o1.textContent = v.name + ' (' + v.lang + ')';
+        maleSelect.appendChild(o1);
+        const o2 = document.createElement('option');
+        o2.value = v.name;
+        o2.textContent = v.name + ' (' + v.lang + ')';
+        femaleSelect.appendChild(o2);
+      });
+      const mDef = [...maleSelect.options].find(o => o.text.includes('en-IN') || o.text.includes('hi-IN')) || maleSelect.options[0];
+      if (mDef) maleSelect.value = mDef.value;
+      const fDef = [...femaleSelect.options].find(o =>
+        o.text.toLowerCase().includes('female') && (o.text.includes('en-IN') || o.text.includes('hi-IN'))
+      ) || femaleSelect.options[0];
+      if (fDef) femaleSelect.value = fDef.value;
+    }
+    
+    if ('speechSynthesis' in window) {
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    } else {
+      showStatus('Browser speech support nahi karta (Chrome/Edge use karo).', 'error');
+    }
+    
+    function parseDialogue(text) {
+      const mode = modeSelect.value;
+      const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+      const out = [];
+      lines.forEach(line => {
+        const idx = line.indexOf(':');
+        if (idx === -1) return;
+        const name = line.slice(0, idx).trim().toLowerCase();
+        const sentence = line.slice(idx + 1).trim();
+        if (!sentence) return;
+        let isMale = name.includes('aarav');
+        if (mode === 'aarav' && !isMale) return;
+        if (mode === 'sara' && isMale) return;
+        if (mode === 'aarav') isMale = true;
+        if (mode === 'sara') isMale = false;
+        out.push({ text: sentence, isMale });
+      });
+      return out;
+    }
+    
+    function speakLine(text, isMale) {
+      return new Promise(resolve => {
+        const u = new SpeechSynthesisUtterance(text);
+        const voices = window.speechSynthesis.getVoices();
+        const name = isMale ? maleSelect.value : femaleSelect.value;
+        const v = voices.find(v => v.name === name);
+        if (v) u.voice = v;
         
-        const API_BASE = "https://api.streamelements.com/kappa/v2/speech";
-
-        function parseDialogue(rawText) {
-            const lines = rawText.split('\n');
-            const parsed = [];
-            const mode = document.getElementById('speakerMode').value;
-
-            lines.forEach(line => {
-                line = line.trim();
-                if (!line) return;
-
-                const colonIndex = line.indexOf(':');
-                if (colonIndex === -1) return; 
-
-                const name = line.substring(0, colonIndex).trim();
-                const text = line.substring(colonIndex + 1).trim();
-
-                if (!text) return; 
-
-                // Detect Gender (Simple logic: Aarav=Male)
-                const isMale = name.toLowerCase().includes('aarav');
-
-                // Filter
-                if (mode === 'aarav' && !isMale) return;
-                if (mode === 'sara' && isMale) return;
-
-                parsed.push({
-                    name: name,
-                    text: text,
-                    isMale: isMale,
-                    voice: isMale ? document.getElementById('voiceMale').value : document.getElementById('voiceFemale').value
-                });
-            });
-
-            return parsed;
+        // Refined natural settings
+        u.rate = isMale ? currentRate * 0.9 : currentRate * 1.05;
+        u.pitch = isMale ? 0.8 : 1.35;
+        u.volume = 1.0;
+        
+        u.onend = () => resolve();
+        window.speechSynthesis.speak(u);
+      });
+    }
+    
+    async function previewDialogue() {
+      const parts = parseDialogue(scriptBox.value);
+      if (!parts.length) {
+        showStatus('Format: Aarav: line / Sara: line', 'error');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      previewBox.classList.remove('hidden');
+      linesBox.innerHTML = '';
+      showStatus('Preview chal raha hai…', 'info');
+      
+      let prevIsMale = null;
+      
+      for (const p of parts) {
+        const row = document.createElement('div');
+        row.className =
+          'px-3 py-2 md:px-4 md:py-3 rounded-2xl text-sm md:text-base text-white shadow ' +
+          (p.isMale ?
+            'bg-gradient-to-r from-blue-500 to-indigo-500' :
+            'bg-gradient-to-r from-pink-500 to-rose-500');
+        row.textContent = p.text;
+        linesBox.appendChild(row);
+        
+        await speakLine(p.text, p.isMale);
+        
+        let pauseMs;
+        if (prevIsMale === null) {
+          pauseMs = 500; // first line
+        } else if (prevIsMale === p.isMale) {
+          pauseMs = 350; // same speaker continue
+        } else {
+          pauseMs = 900; // speaker change
         }
-
-        async function fetchTTS(text, voice) {
-            // Encode text for URL
-            const encodedText = encodeURIComponent(text);
-            const url = `${API_BASE}?voice=${voice}&text=${encodedText}`;
-
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error("Network response was not ok");
-                return await response.arrayBuffer();
-            } catch (error) {
-                console.error("TTS Fetch Error:", error);
-                throw error;
-            }
-        }
-
-        async function processDialogue(actionType) {
-            // Reset UI
-            const statusArea = document.getElementById('statusArea');
-            const previewArea = document.getElementById('previewArea');
-            const chatContainer = document.getElementById('chatContainer');
-            const downloadArea = document.getElementById('downloadArea');
-            
-            statusArea.style.display = 'none';
-            downloadArea.classList.add('hidden');
-            previewArea.classList.add('hidden');
-            chatContainer.innerHTML = '';
-
-            const rawText = document.getElementById('dialogueInput').value;
-            const dialogueLines = parseDialogue(rawText);
-
-            if (dialogueLines.length === 0) {
-                alert("No valid lines found. Use 'Name: Message' format.");
-                return;
-            }
-
-            statusArea.style.display = 'block';
-            statusArea.innerText = `⏳ Initializing... Found ${dialogueLines.length} lines.`;
-
-            const audioBuffers = [];
-
-            try {
-                for (let i = 0; i < dialogueLines.length; i++) {
-                    const line = dialogueLines[i];
-                    statusArea.innerText = `🎙️ Processing line ${i + 1}/${dialogueLines.length} (${line.name})...`;
-                    
-                    // Fetch from Free API
-                    const buffer = await fetchTTS(line.text, line.voice);
-                    audioBuffers.push(buffer);
-
-                    // Create Chat Bubble
-                    const bubble = document.createElement('div');
-                    if (line.isMale) {
-                        bubble.className = "flex gap-3 items-start fade-in";
-                        bubble.innerHTML = `
-                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-lg">👨</div>
-                            <div class="bg-blue-50 border border-blue-100 text-blue-900 rounded-tr-xl rounded-br-xl rounded-bl-xl p-3 text-sm shadow-sm">
-                                <span class="font-bold text-blue-700 text-xs block mb-1">${line.name}</span>
-                                ${line.text}
-                            </div>
-                        `;
-                    } else {
-                        bubble.className = "flex gap-3 items-start flex-row-reverse fade-in";
-                        bubble.innerHTML = `
-                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center text-lg">👩</div>
-                            <div class="bg-rose-50 border border-rose-100 text-rose-900 rounded-tl-xl rounded-bl-xl rounded-br-xl p-3 text-sm shadow-sm text-right">
-                                <span class="font-bold text-rose-700 text-xs block mb-1">${line.name}</span>
-                                ${line.text}
-                            </div>
-                        `;
-                    }
-                    chatContainer.appendChild(bubble);
-                }
-
-                statusArea.innerText = "💾 Merging audio...";
-                const finalBlob = new Blob(audioBuffers, { type: 'audio/mpeg' });
-                const audioUrl = URL.createObjectURL(finalBlob);
-
-                statusArea.style.display = 'none';
-
-                if (actionType === 'preview') {
-                    previewArea.classList.remove('hidden');
-                    const audio = new Audio(audioUrl);
-                    audio.play();
-                } 
-                
-                if (actionType === 'download') {
-                    previewArea.classList.remove('hidden');
-                    downloadArea.classList.remove('hidden');
-                    
-                    const player = document.getElementById('finalAudioPlayer');
-                    player.src = audioUrl;
-
-                    const dlLink = document.getElementById('downloadLink');
-                    dlLink.href = audioUrl;
-                }
-
-            } catch (error) {
-                statusArea.className = "rounded-lg bg-red-100 p-3 text-red-800 text-sm font-medium text-center";
-                statusArea.innerText = "❌ Error: API might be busy. Try shorter text.";
-            }
-        }
-    </script>
+        prevIsMale = p.isMale;
+        await new Promise(r => setTimeout(r, pauseMs));
+      }
+      
+      showStatus('Preview complete. Ab speed, mode ya script badal kar fir se sun sakte ho.', 'ok');
+    }
+    
+    previewBtn.addEventListener('click', previewDialogue);
+  </script>
 </body>
+
 </html>
