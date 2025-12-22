@@ -1,313 +1,210 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DialoVoice Maker - Free Male Female English Dialogue Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DialoVoice Maker - Free online tool to create realistic male-female English conversations. Paste Aarav: Sara: dialogue script, preview with speed/pitch control, record internal audio for YouTube Shorts. No API key needed!">
-  <meta name="keywords" content="dialovoice, text to speech, english dialogue generator, male female voice, conversation maker, tts hindi english, free voice generator, youtube shorts audio">
-  <meta name="author" content="DialoVoice Maker">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="DialoVoice Maker - Free Male Female English Dialogue Generator">
-  <meta property="og:description" content="Create realistic English conversations instantly! Male + Female voices, speed/pitch control, perfect for YouTube content creators.">
-  <meta property="og:url" content="https://dialovoice.com">
-  <meta property="og:image" content="https://dialovoice.com/og-image.jpg">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DialoVoice Maker - Free Dialogue Generator">
-  <meta name="twitter:description" content="Male + Female English conversations in seconds! Free TTS tool for YouTube creators.">
-  <meta name="twitter:image" content="https://dialovoice.com/twitter-image.jpg">
-  
-  <!-- Schema.org for rich snippets -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "DialoVoice Maker",
-    "description": "Free online male-female English dialogue generator using browser TTS",
-    "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "Any",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
-  </script>
-  
+  <title>Bagsstyle – Bulk Bag Manufacturing</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
 
-<body class="bg-gradient-to-br from-amber-50 via-rose-50 to-indigo-50 min-h-screen">
-  <div class="max-w-4xl mx-auto p-4 md:p-6 lg:p-8">
-    <!-- Header -->
-    <div class="text-center mb-6 md:mb-8">
-      <h1 class="text-2xl md:text-4xl font-bold bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 bg-clip-text text-transparent mb-2 drop-shadow">
-        🎙️ DialoVoice Maker
-      </h1>
-      <p class="text-gray-700 font-semibold text-sm md:text-base">
-        Male + Female English Conversations | Free Browser TTS | Record & Download
-      </p>
-      <div class="mt-3 bg-gradient-to-r from-emerald-100 to-green-100 p-2 md:p-3 rounded-2xl text-xs font-bold text-emerald-800 shadow">
-        ✅ 100% Free • No Signup • No API Key • Instant Preview
+<!-- HEADER -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <i data-lucide="shopping-bag" class="w-10 h-10 text-indigo-600"></i>
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900">Bagsstyle</h1>
+        <p class="text-sm text-gray-600">Premium Bulk Bag Manufacturing <a href="/EasySpeakUp.html">External web</a></p>
       </div>
     </div>
-
-    <!-- How to download audio (instruction + CTA) -->
-    <div class="bg-white/90 p-4 md:p-5 rounded-3xl shadow-xl border border-white/60 mb-5 md:mb-6 backdrop-blur-sm">
-      <h2 class="font-bold text-base md:text-lg text-emerald-800 mb-2 text-center">
-        🔊 Audio Download Trick (100% Free)
-      </h2>
-      <ol class="list-decimal list-inside text-xs md:text-sm text-gray-800 space-y-1.5 md:space-y-2 text-left">
-        <li>Play Store se "Internal Audio Recorder" install karein</li>
-        <li>App me internal audio recording ON karein</li>
-        <li>"Preview" button dabayein - audio record hoga</li>
-        <li>MP3 save karke YouTube Shorts me use karein</li>
-      </ol>
-
-      <a href="https://play.google.com/store/apps/details?id=com.ptdstudio.internalsoundrecorder" target="_blank"
-        class="mt-3 inline-flex items-center justify-center w-full md:w-auto px-4 py-2.5 rounded-2xl text-xs md:text-sm font-bold text-white bg-gradient-to-r from-emerald-500 to-green-600 shadow hover:shadow-lg hover:-translate-y-0.5 transition">
-        📱 Install Recorder App (Play Store)
-      </a>
-    </div>
-
-    <!-- Script input -->
-    <div class="bg-white/80 p-4 md:p-6 rounded-3xl shadow-xl border border-white/60 mb-5 md:mb-6 backdrop-blur-sm hover:shadow-2xl hover:-translate-y-0.5 transition">
-      <label class="block text-lg md:text-xl font-bold text-center mb-2 md:mb-3">
-        💬 Dialogue Script (Aarav: / Sara: format)
-      </label>
-      <textarea id="script" rows="7"
-        class="w-full p-3 md:p-4 border-2 border-gray-200 rounded-2xl text-sm md:text-lg min-h-[190px] md:min-h-[230px] resize-y">
-Aarav: Hi, excuse me… is this seat taken?
-Sara: Oh no, you can sit here.
-Aarav: Thank you so much.
-Sara: You're welcome!
-Aarav: What's your name?
-Sara: I'm Sara, nice to meet you!</textarea>
-      <p class="mt-2 text-[11px] md:text-xs text-gray-600 text-center">
-        ✨ Tip: Naam bolta nahi, sirf dialogue lines bolta hai
-      </p>
-    </div>
-
-    <!-- Voice selects -->
-    <div class="grid md:grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-5">
-      <div class="bg-blue-50/90 p-3 md:p-4 rounded-2xl shadow-xl border border-white/60 backdrop-blur-sm hover:shadow-2xl hover:-translate-y-0.5 transition">
-        <h3 class="font-bold mb-1.5 md:mb-2 flex items-center text-blue-800 text-sm md:text-base">
-          <span class="mr-2 text-xl md:text-2xl">👨</span> Male Voice (Aarav)
-        </h3>
-        <select id="maleVoice" class="w-full border rounded-lg p-2 text-xs md:text-sm"></select>
-      </div>
-      <div class="bg-pink-50/90 p-3 md:p-4 rounded-2xl shadow-xl border border-white/60 backdrop-blur-sm hover:shadow-2xl hover:-translate-y-0.5 transition">
-        <h3 class="font-bold mb-1.5 md:mb-2 flex items-center text-pink-800 text-sm md:text-base">
-          <span class="mr-2 text-xl md:text-2xl">👩</span> Female Voice (Sara)
-        </h3>
-        <select id="femaleVoice" class="w-full border rounded-lg p-2 text-xs md:text-sm"></select>
-      </div>
-    </div>
-
-    <!-- Speaker mode -->
-    <div class="bg-white/80 p-3 rounded-2xl shadow-xl border border-white/60 mb-4 flex flex-wrap gap-2 md:gap-3 items-center justify-between backdrop-blur-sm">
-      <span class="font-semibold text-xs md:text-sm">🎭 Speaker Mode:</span>
-      <select id="mode" class="border rounded-lg p-2 text-xs md:text-sm w-full sm:w-auto">
-        <option value="both">👨👩 Both (Dialogue)</option>
-        <option value="aarav">👨 Only Male</option>
-        <option value="sara">👩 Only Female</option>
-      </select>
-    </div>
-
-    <!-- Speed + Pitch controls -->
-    <div class="bg-white/80 p-3 md:p-4 rounded-2xl shadow-xl border border-white/60 mb-5 md:mb-6 flex flex-col gap-3 backdrop-blur-sm">
-      <div class="flex flex-wrap gap-2 items-center justify-center">
-        <span class="font-semibold text-xs md:text-sm mr-1">⚡ Speed:</span>
-        <button class="speed px-3 py-1 rounded-full bg-slate-200 text-[11px] md:text-xs" data-rate="0.6">🐌 Slow</button>
-        <button class="speed px-3 py-1 rounded-full bg-slate-200 text-[11px] md:text-xs" data-rate="0.85">😌 Normal</button>
-        <button class="speed px-3 py-1 rounded-full bg-indigo-600 text-white text-[11px] md:text-xs" data-rate="1">🚀 Fast</button>
-        <button class="speed px-3 py-1 rounded-full bg-slate-200 text-[11px] md:text-xs" data-rate="1.15">⚡ Extra Fast</button>
-      </div>
-
-      <div class="mt-2 flex flex-col gap-1">
-        <label for="pitchControl" class="font-semibold text-xs md:text-sm text-center">
-          🎵 Pitch: Deep ⟶ Natural ⟶ Sharp
-        </label>
-        <input id="pitchControl" type="range" min="0.5" max="1.7" step="0.05" value="1" class="w-full accent-indigo-600">
-        <div class="flex justify-between text-[10px] md:text-xs text-gray-500">
-          <span>🗣️ Deep</span>
-          <span>🎤 Natural</span>
-          <span>🗨️ Sharp</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Button -->
-    <div class="flex flex-col sm:flex-row gap-3 md:gap-4 mb-4 md:mb-5">
-      <button id="previewBtn"
-        class="w-full sm:flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3.5 md:py-4 rounded-3xl font-bold text-base md:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition">
-        ▶️ Generate & Preview Dialogue
-      </button>
-    </div>
-
-    <!-- Status -->
-    <div id="status" class="hidden text-center p-3 rounded-3xl text-[11px] md:text-xs font-mono mb-4"></div>
-
-    <!-- Dialogue lines preview -->
-    <div id="previewBox" class="hidden bg-white/90 p-3 md:p-4 rounded-3xl shadow-xl border border-white/60 mb-2 md:mb-4 backdrop-blur-sm">
-      <div id="lines" class="space-y-1.5 md:space-y-2 text-sm md:text-base"></div>
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#products" class="text-gray-700 hover:text-indigo-600 transition">Products</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+      <a href="#contact" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Contact Us</a>
     </div>
   </div>
+</header>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-xs text-gray-500">
-    <p>Made with ❤️ for English content creators | Powered by Web Speech API</p>
-  </footer>
+<!-- HERO -->
+<section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 text-center">
+  <h2 class="text-5xl font-bold mb-6">Your Trusted Partner in Bulk Bag Manufacturing</h2>
+  <p class="text-xl mb-8 max-w-3xl mx-auto">From schools to jewelry shops, we create custom bags for every business need across India</p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="#contact" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center">
+      Get a Quote <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+    </a>
+    <a href="https://wa.me/917903433690" target="_blank"
+       class="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-600 transition inline-flex items-center justify-center">
+      <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i> WhatsApp Us
+    </a>
+  </div>
+</section>
 
-  <script>
-    const scriptBox = document.getElementById('script');
-    const maleSelect = document.getElementById('maleVoice');
-    const femaleSelect = document.getElementById('femaleVoice');
-    const modeSelect = document.getElementById('mode');
-    const previewBtn = document.getElementById('previewBtn');
-    const statusBox = document.getElementById('status');
-    const previewBox = document.getElementById('previewBox');
-    const linesBox = document.getElementById('lines');
-    const pitchSlider = document.getElementById('pitchControl');
+<!-- WHY CHOOSE -->
+<section class="py-16 bg-white">
+  <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Bagsstyle?</h3>
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
+      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="factory" class="w-8 h-8"></i></div>
+      <h4 class="text-xl font-semibold mb-2 text-gray-900">Own Manufacturing</h4>
+      <p class="text-gray-600">Complete control over quality</p>
+    </div>
+    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
+      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="users" class="w-8 h-8"></i></div>
+      <h4 class="text-xl font-semibold mb-2 text-gray-900">Bulk Orders</h4>
+      <p class="text-gray-600">Specialized in large quantities</p>
+    </div>
+    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
+      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="package" class="w-8 h-8"></i></div>
+      <h4 class="text-xl font-semibold mb-2 text-gray-900">Custom Solutions</h4>
+      <p class="text-gray-600">Made exactly as per requirements</p>
+    </div>
+    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
+      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="check-circle" class="w-8 h-8"></i></div>
+      <h4 class="text-xl font-semibold mb-2 text-gray-900">Pan-India Service</h4>
+      <p class="text-gray-600">Clients all across India</p>
+    </div>
+  </div>
+</section>
 
-    let currentRate = 1;
-    let globalPitch = 1;
+<!-- PRODUCTS -->
+<section id="products" class="py-16 bg-slate-50">
+  <h3 class="text-3xl font-bold text-center mb-4 text-gray-900">Our Product Range</h3>
+  <p class="text-center text-gray-600 mb-12">We manufacture all types of bags tailored for business</p>
 
-    function showStatus(msg, type) {
-      const base = 'text-center p-3 rounded-3xl text-[11px] md:text-xs font-mono mb-4 ';
-      if (type === 'error') statusBox.className = base + 'bg-red-100 text-red-800';
-      else if (type === 'ok') statusBox.className = base + 'bg-emerald-100 text-emerald-800';
-      else statusBox.className = base + 'bg-blue-100 text-blue-800';
-      statusBox.textContent = msg;
-      statusBox.classList.remove('hidden');
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+    <script>
+      const bagTypes = [
+        { icon: "🎒", name: "School Bags", desc: "Durable bags for educational institutions" },
+        { icon: "🛍️", name: "Shopping Bags", desc: "Eco-friendly retail bags" },
+        { icon: "💎", name: "Jewelry Pouches", desc: "Premium pouches for jewelry shops" },
+        { icon: "💼", name: "Corporate Bags", desc: "Branded bags for businesses" },
+        { icon: "👜", name: "Tote Bags", desc: "Versatile bags for various uses" },
+        { icon: "✨", name: "Custom Bags", desc: "Tailored bag solutions" }
+      ];
+      document.write(
+        bagTypes.map(b =>
+          `<div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition text-center">
+            <div class='text-5xl mb-4'>${b.icon}</div>
+            <h4 class='text-2xl font-semibold mb-3 text-gray-900'>${b.name}</h4>
+            <p class='text-gray-600'>${b.desc}</p>
+          </div>`
+        ).join("")
+      );
+    </script>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-16 bg-white">
+  <div class="max-w-3xl mx-auto text-center px-4">
+    <h3 class="text-3xl font-bold mb-6 text-gray-900">About Bagsstyle</h3>
+    <p class="text-lg text-gray-700 mb-6">
+      We are a leading bag manufacturing factory specializing in bulk orders for businesses across India.
+    </p>
+    <p class="text-lg text-gray-700">
+      With our own facility, we ensure quality, competitive pricing and timely delivery.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 bg-slate-100">
+  <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">Get in Touch</h3>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-4">
+
+    <!-- Contact Details -->
+    <div>
+      <h4 class="text-2xl font-semibold mb-6 text-gray-900">Contact Information</h4>
+      <p><strong>Email:</strong> <a href="mailto:workforarshad@gmail.com" class="text-indigo-600">workforarshad@gmail.com</a></p>
+      <p class="mt-4"><strong>Phone:</strong> <a href="tel:+917903433690" class="text-indigo-600">+91 7903433690</a></p>
+      <p class="mt-4"><strong>WhatsApp:</strong> <a href="https://wa.me/917903433690" target="_blank" class="text-green-600">+91 7903433690</a></p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bg-white p-8 rounded-xl shadow-md">
+      <h4 class="text-2xl font-semibold mb-6 text-gray-900">Request a Quote</h4>
+
+      <div class="space-y-4">
+        <input id="name" placeholder="Name *" class="input">
+        <input id="email" placeholder="Email *" class="input">
+        <input id="phone" placeholder="Phone *" class="input">
+        <input id="organization" placeholder="Organization" class="input">
+        <select id="bagType" class="input">
+          <option value="">Select Bag Type</option>
+        </select>
+        <input id="quantity" placeholder="Quantity (e.g. 500 units)" class="input">
+        <textarea id="message" rows="3" placeholder="Message" class="input"></textarea>
+        <button onclick="sendMail()" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">Send Inquiry</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-8 text-center">
+  <div class="flex justify-center items-center space-x-2">
+    <i data-lucide="shopping-bag" class="w-8 h-8"></i>
+    <h5 class="text-2xl font-bold">Bagsstyle</h5>
+  </div>
+  <p class="text-gray-400 mt-2">Premium Bulk Bag Manufacturing Across India</p>
+  <p class="text-gray-500 text-sm mt-2">© 2024 Bagsstyle</p>
+</footer>
+
+<!-- 🔥 FINAL SCRIPT WITH WHATSAPP INTEGRATION -->
+<script>
+  // Style input fields
+  document.querySelectorAll(".input").forEach(el =>
+    el.classList.add("w-full","px-4","py-2","border","border-gray-300","rounded-lg","focus:ring-2","focus:ring-indigo-500")
+  );
+
+  // Bag type dropdown
+  bagTypes.forEach(b =>
+    document.getElementById("bagType").innerHTML += `<option value="${b.name}">${b.name}</option>`
+  );
+
+  // SEND TO WHATSAPP FUNCTION
+  function sendMail() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const organization = document.getElementById("organization").value;
+    const bagType = document.getElementById("bagType").value;
+    const quantity = document.getElementById("quantity").value;
+    const message = document.getElementById("message").value;
+
+    if (!name || !email || !phone) {
+      alert("Please fill required fields!");
+      return;
     }
 
-    document.querySelectorAll('.speed').forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentRate = parseFloat(btn.dataset.rate);
-        document.querySelectorAll('.speed').forEach(b => {
-          b.classList.remove('bg-indigo-600', 'text-white');
-          b.classList.add('bg-slate-200', 'text-black');
-        });
-        btn.classList.add('bg-indigo-600', 'text-white');
-        btn.classList.remove('bg-slate-200', 'text-black');
-      });
-    });
+    const whatsappMessage =
+      `🛍️ *New Bag Inquiry Received*\n\n` +
+      `👤 *Name:* ${name}\n` +
+      `📩 *Email:* ${email}\n` +
+      `📞 *Phone:* ${phone}\n` +
+      `🏢 *Organization:* ${organization}\n` +
+      `👜 *Bag Type:* ${bagType}\n` +
+      `📦 *Quantity:* ${quantity}\n` +
+      `📝 *Message:* ${message}`;
 
-    pitchSlider.addEventListener('input', () => {
-      globalPitch = parseFloat(pitchSlider.value);
-    });
+    const whatsappNumber = "917903433690";
 
-    function loadVoices() {
-      const voices = window.speechSynthesis.getVoices();
-      maleSelect.innerHTML = '';
-      femaleSelect.innerHTML = '';
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+      "_blank"
+    );
+  }
 
-      voices.forEach(v => {
-        const o1 = document.createElement('option');
-        o1.value = v.name;
-        o1.textContent = v.name + ' (' + v.lang + ')';
-        maleSelect.appendChild(o1);
+  lucide.createIcons();
+</script>
 
-        const o2 = document.createElement('option');
-        o2.value = v.name;
-        o2.textContent = v.name + ' (' + v.lang + ')';
-        femaleSelect.appendChild(o2);
-      });
-
-      const maleDefault = [...maleSelect.options].find(o => o.text.includes('en-IN')) || maleSelect.options[0];
-      if (maleDefault) maleSelect.value = maleDefault.value;
-
-      const femaleDefault = [...femaleSelect.options].find(o => o.text.toLowerCase().includes('female') && o.text.includes('en-IN')) || femaleSelect.options[0];
-      if (femaleDefault) femaleSelect.value = femaleDefault.value;
-    }
-
-    if ('speechSynthesis' in window) {
-      loadVoices();
-      window.speechSynthesis.onvoiceschanged = loadVoices;
-    } else {
-      showStatus('Chrome/Edge use karein for best experience.', 'error');
-    }
-
-    function parseDialogue(text) {
-      const mode = modeSelect.value;
-      const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-      const out = [];
-      lines.forEach(line => {
-        const idx = line.indexOf(':');
-        if (idx === -1) return;
-        const name = line.slice(0, idx).trim().toLowerCase();
-        const sentence = line.slice(idx + 1).trim();
-        if (!sentence) return;
-
-        let isMale = name.includes('aarav');
-        if (mode === 'aarav' && !isMale) return;
-        if (mode === 'sara' && isMale) return;
-        if (mode === 'aarav') isMale = true;
-        if (mode === 'sara') isMale = false;
-
-        out.push({ text: sentence, isMale });
-      });
-      return out;
-    }
-
-    function speakLine(text, isMale) {
-      return new Promise(resolve => {
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = 'en-IN';
-        
-        const voices = window.speechSynthesis.getVoices();
-        const name = isMale ? maleSelect.value : femaleSelect.value;
-        const v = voices.find(vv => vv.name === name);
-        if (v) u.voice = v;
-
-        const baseRate = isMale ? currentRate * 0.9 : currentRate * 1.05;
-        const basePitch = 1;
-        u.rate = baseRate;
-        u.pitch = basePitch * globalPitch;
-        u.volume = 1.0;
-
-        u.onend = () => resolve();
-        window.speechSynthesis.speak(u);
-      });
-    }
-
-    async function previewDialogue() {
-      const parts = parseDialogue(scriptBox.value);
-      if (!parts.length) {
-        showStatus('Format: Aarav: line / Sara: line', 'error');
-        return;
-      }
-
-      window.speechSynthesis.cancel();
-      previewBox.classList.remove('hidden');
-      linesBox.innerHTML = '';
-      showStatus('🎤 Generating dialogue... Record kar sakte hain!', 'info');
-
-      let prevIsMale = null;
-      for (const p of parts) {
-        const row = document.createElement('div');
-        row.className = 'px-3 py-2 md:px-4 md:py-3 rounded-2xl text-xs md:text-base text-white shadow ' +
-          (p.isMale ? 'bg-gradient-to-r from-blue-500 to-indigo-500' : 'bg-gradient-to-r from-pink-500 to-rose-500');
-        row.textContent = p.text;
-        linesBox.appendChild(row);
-
-        await speakLine(p.text, p.isMale);
-
-        let pauseMs = prevIsMale === null ? 500 : prevIsMale === p.isMale ? 350 : 900;
-        prevIsMale = p.isMale;
-        await new Promise(r => setTimeout(r, pauseMs));
-      }
-
-      showStatus('✅ Dialogue complete! Record kiya? Naya script try karein.', 'ok');
-    }
-
-    previewBtn.addEventListener('click', previewDialogue);
-  </script>
 </body>
 </html>
