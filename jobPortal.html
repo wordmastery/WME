@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Connect - Find Your Dream Job</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 to-purple-600 min-h-screen p-5">
+    <div class="max-w-2xl mx-auto">
+        <!-- Header -->
+        <div class="text-center text-white mb-10 animate-fade-in-down">
+            <h1 class="text-5xl md:text-6xl mb-3 drop-shadow-2xl font-bold">🚀 Career Connect</h1>
+            <p class="text-xl md:text-2xl opacity-95">Your Gateway to Exciting Career Opportunities</p>
+        </div>
+
+        <!-- Form Card -->
+        <div class="bg-white rounded-3xl p-10 md:p-16 shadow-2xl animate-fade-in-up">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-3xl md:text-4xl text-indigo-600 mb-3 font-bold">Apply Now</h2>
+                <p class="text-gray-600 text-lg">Fill in your details and take the first step towards your dream career</p>
+            </div>
+
+            <form id="jobForm" class="space-y-6">
+                <div>
+                    <label for="fullName" class="block mb-3 text-gray-800 font-semibold text-sm">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required 
+                           class="w-full p-4 border-2 border-gray-200 rounded-2xl text-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all duration-300" 
+                           placeholder="Enter your full name">
+                </div>
+
+                <div>
+                    <label for="email" class="block mb-3 text-gray-800 font-semibold text-sm">Email Address *</label>
+                    <input type="email" id="email" name="email" required 
+                           class="w-full p-4 border-2 border-gray-200 rounded-2xl text-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all duration-300" 
+                           placeholder="your.email@example.com">
+                </div>
+
+                <div>
+                    <label for="contact" class="block mb-3 text-gray-800 font-semibold text-sm">Contact Number *</label>
+                    <input type="tel" id="contact" name="contact" required 
+                           class="w-full p-4 border-2 border-gray-200 rounded-2xl text-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all duration-300" 
+                           placeholder="+91 79034 33690">
+                </div>
+
+                <div>
+                    <label for="qualifications" class="block mb-3 text-gray-800 font-semibold text-sm">Qualifications *</label>
+                    <input type="text" id="qualifications" name="qualifications" required 
+                           class="w-full p-4 border-2 border-gray-200 rounded-2xl text-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all duration-300" 
+                           placeholder="e.g., Bachelor's in Computer Science">
+                </div>
+
+                <div>
+                    <label for="desiredPosition" class="block mb-3 text-gray-800 font-semibold text-sm">Desired Position *</label>
+                    <select id="desiredPosition" name="desiredPosition" required 
+                            class="w-full p-4 border-2 border-gray-200 rounded-2xl text-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all duration-300">
+                        <option value="">Select a position</option>
+                        <option value="Software Developer">Software Developer</option>
+                        <option value="Data Analyst">Data Analyst</option>
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="Marketing Manager">Marketing Manager</option>
+                        <option value="Sales Executive">Sales Executive</option>
+                        <option value="HR Specialist">HR Specialist</option>
+                        <option value="Graphic Designer">Graphic Designer</option>
+                        <option value="Content Writer">Content Writer</option>
+                        <option value="Customer Support">Customer Support</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="experience" class="block mb-3 text-gray-800 font-semibold text-sm">Work Experience *</label>
+                    <textarea id="experience" name="experience" required 
+                              class="w-full p-4 border-2 border-gray-200 rounded-2xl text-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all duration-300 resize-vertical min-h-32" 
+                              placeholder="Describe your work experience, skills, and achievements..."></textarea>
+                </div>
+
+                <button type="submit" 
+                        class="w-full py-5 bg-gradient-to-r from-indigo-500 to-purple-600 text-white border-none rounded-2xl text-xl font-semibold cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/50 active:translate-y-0 mt-3">
+                    Submit Application
+                </button>
+            </form>
+
+            <div id="successMessage" class="hidden bg-green-500 text-white p-6 rounded-2xl text-center mt-6 animate-slide-in">
+                ✅ Thank you! Your application has been submitted successfully. We'll contact you soon!
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div class="bg-white/20 backdrop-blur-xl p-8 rounded-3xl text-center text-white animate-fade-in-up">
+                <h3 class="text-2xl font-bold mb-3">💼 Multiple Industries</h3>
+                <p class="opacity-90 text-lg">Opportunities across tech, finance, healthcare, and more</p>
+            </div>
+            <div class="bg-white/20 backdrop-blur-xl p-8 rounded-3xl text-center text-white animate-fade-in-up animation-delay-200">
+                <h3 class="text-2xl font-bold mb-3">⚡ Quick Process</h3>
+                <p class="opacity-90 text-lg">Simple application with fast response times</p>
+            </div>
+            <div class="bg-white/20 backdrop-blur-xl p-8 rounded-3xl text-center text-white animate-fade-in-up animation-delay-400">
+                <h3 class="text-2xl font-bold mb-3">🎯 Perfect Match</h3>
+                <p class="opacity-90 text-lg">We connect you with roles that fit your skills</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fade-in-down {
+                from { opacity: 0; transform: translateY(-30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes fade-in-up {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes slide-in {
+                from { opacity: 0; transform: translateX(-20px); }
+                to { opacity: 1; transform: translateX(0); }
+            }
+            .animate-fade-in-down { animation: fade-in-down 0.8s ease; }
+            .animate-fade-in-up { animation: fade-in-up 0.8s ease; }
+            .animate-slide-in { animation: slide-in 0.5s ease; }
+            .animation-delay-200 { animation-delay: 0.2s; }
+            .animation-delay-400 { animation-delay: 0.4s; }
+        `;
+        document.head.appendChild(style);
+
+        const form = document.getElementById('jobForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                contact: document.getElementById('contact').value,
+                qualifications: document.getElementById('qualifications').value,
+                desiredPosition: document.getElementById('desiredPosition').value,
+                experience: document.getElementById('experience').value,
+                submittedAt: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+            };
+
+            // Format message for WhatsApp
+            const message = `🔥 NEW JOB APPLICATION RECEIVED 🔥
+
+` +
+                          `👤 Name: ${formData.fullName}
+` +
+                          `📧 Email: ${formData.email}
+` +
+                          `📱 Contact: ${formData.contact}
+` +
+                          `🎓 Qualifications: ${formData.qualifications}
+` +
+                          `💼 Position: ${formData.desiredPosition}
+` +
+                          `📋 Experience:
+${formData.experience}
+
+` +
+                          `⏰ Submitted: ${formData.submittedAt}`;
+
+            const whatsappUrl = `https://wa.me/917903433690?text=${encodeURIComponent(message)}`;
+
+            // Show success message
+            successMessage.classList.remove('hidden');
+            successMessage.classList.add('animate-slide-in');
+            
+            // Reset form
+            form.reset();
+            
+            // Open WhatsApp after 1 second
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 1000);
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+                successMessage.classList.remove('animate-slide-in');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
