@@ -3,210 +3,1229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bagsstyle – Bulk Bag Manufacturing</title>
+  <title>A&N VIBE | Premium Bags & Accessories</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-</head>
-<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-
-<!-- HEADER -->
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-    <div class="flex items-center space-x-3">
-      <i data-lucide="shopping-bag" class="w-10 h-10 text-indigo-600"></i>
-      <div>
-        <h1 class="text-3xl font-bold text-gray-900">Bagsstyle</h1>
-        <p class="text-sm text-gray-600">Premium Bulk Bag Manufacturing 
-        <a href="/jobPortal.html">jobportal</a>
-        </p>
-      </div>
-    </div>
-    <div class="hidden md:flex items-center space-x-6">
-      <a href="#products" class="text-gray-700 hover:text-indigo-600 transition">Products</a>
-      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
-      <a href="#contact" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Contact Us</a>
-    </div>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 text-center">
-  <h2 class="text-5xl font-bold mb-6">Your Trusted Partner in Bulk Bag Manufacturing</h2>
-  <p class="text-xl mb-8 max-w-3xl mx-auto">From schools to jewelry shops, we create custom bags for every business need across India</p>
-  <div class="flex flex-col sm:flex-row gap-4 justify-center">
-    <a href="#contact" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center">
-      Get a Quote <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
-    </a>
-    <a href="https://wa.me/917903433690" target="_blank"
-       class="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-600 transition inline-flex items-center justify-center">
-      <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i> WhatsApp Us
-    </a>
-  </div>
-</section>
-
-<!-- WHY CHOOSE -->
-<section class="py-16 bg-white">
-  <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Bagsstyle?</h3>
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
-      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="factory" class="w-8 h-8"></i></div>
-      <h4 class="text-xl font-semibold mb-2 text-gray-900">Own Manufacturing</h4>
-      <p class="text-gray-600">Complete control over quality</p>
-    </div>
-    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
-      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="users" class="w-8 h-8"></i></div>
-      <h4 class="text-xl font-semibold mb-2 text-gray-900">Bulk Orders</h4>
-      <p class="text-gray-600">Specialized in large quantities</p>
-    </div>
-    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
-      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="package" class="w-8 h-8"></i></div>
-      <h4 class="text-xl font-semibold mb-2 text-gray-900">Custom Solutions</h4>
-      <p class="text-gray-600">Made exactly as per requirements</p>
-    </div>
-    <div class="text-center p-6 rounded-xl bg-slate-50 hover:shadow-lg transition">
-      <div class="inline-block p-4 bg-indigo-100 rounded-full mb-4 text-indigo-600"><i data-lucide="check-circle" class="w-8 h-8"></i></div>
-      <h4 class="text-xl font-semibold mb-2 text-gray-900">Pan-India Service</h4>
-      <p class="text-gray-600">Clients all across India</p>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products" class="py-16 bg-slate-50">
-  <h3 class="text-3xl font-bold text-center mb-4 text-gray-900">Our Product Range</h3>
-  <p class="text-center text-gray-600 mb-12">We manufacture all types of bags tailored for business</p>
-
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-    <script>
-      const bagTypes = [
-        { icon: "🎒", name: "School Bags", desc: "Durable bags for educational institutions" },
-        { icon: "🛍️", name: "Shopping Bags", desc: "Eco-friendly retail bags" },
-        { icon: "💎", name: "Jewelry Pouches", desc: "Premium pouches for jewelry shops" },
-        { icon: "💼", name: "Corporate Bags", desc: "Branded bags for businesses" },
-        { icon: "👜", name: "Tote Bags", desc: "Versatile bags for various uses" },
-        { icon: "✨", name: "Custom Bags", desc: "Tailored bag solutions" }
-      ];
-      document.write(
-        bagTypes.map(b =>
-          `<div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition text-center">
-            <div class='text-5xl mb-4'>${b.icon}</div>
-            <h4 class='text-2xl font-semibold mb-3 text-gray-900'>${b.name}</h4>
-            <p class='text-gray-600'>${b.desc}</p>
-          </div>`
-        ).join("")
-      );
-    </script>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-16 bg-white">
-  <div class="max-w-3xl mx-auto text-center px-4">
-    <h3 class="text-3xl font-bold mb-6 text-gray-900">About Bagsstyle</h3>
-    <p class="text-lg text-gray-700 mb-6">
-      We are a leading bag manufacturing factory specializing in bulk orders for businesses across India.
-    </p>
-    <p class="text-lg text-gray-700">
-      With our own facility, we ensure quality, competitive pricing and timely delivery.
-    </p>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-16 bg-slate-100">
-  <h3 class="text-3xl font-bold text-center mb-12 text-gray-900">Get in Touch</h3>
-
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-4">
-
-    <!-- Contact Details -->
-    <div>
-      <h4 class="text-2xl font-semibold mb-6 text-gray-900">Contact Information</h4>
-      <p><strong>Email:</strong> <a href="mailto:workforarshad@gmail.com" class="text-indigo-600">workforarshad@gmail.com</a></p>
-      <p class="mt-4"><strong>Phone:</strong> <a href="tel:+917903433690" class="text-indigo-600">+91 7903433690</a></p>
-      <p class="mt-4"><strong>WhatsApp:</strong> <a href="https://wa.me/917903433690" target="_blank" class="text-green-600">+91 7903433690</a></p>
-    </div>
-
-    <!-- Contact Form -->
-    <div class="bg-white p-8 rounded-xl shadow-md">
-      <h4 class="text-2xl font-semibold mb-6 text-gray-900">Request a Quote</h4>
-
-      <div class="space-y-4">
-        <input id="name" placeholder="Name *" class="input">
-        <input id="email" placeholder="Email *" class="input">
-        <input id="phone" placeholder="Phone *" class="input">
-        <input id="organization" placeholder="Organization" class="input">
-        <select id="bagType" class="input">
-          <option value="">Select Bag Type</option>
-        </select>
-        <input id="quantity" placeholder="Quantity (e.g. 500 units)" class="input">
-        <textarea id="message" rows="3" placeholder="Message" class="input"></textarea>
-        <button onclick="sendMail()" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">Send Inquiry</button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-white py-8 text-center">
-  <div class="flex justify-center items-center space-x-2">
-    <i data-lucide="shopping-bag" class="w-8 h-8"></i>
-    <h5 class="text-2xl font-bold">Bagsstyle</h5>
-  </div>
-  <p class="text-gray-400 mt-2">Premium Bulk Bag Manufacturing Across India</p>
-  <p class="text-gray-500 text-sm mt-2">© 2024 Bagsstyle</p>
-</footer>
-
-<!-- 🔥 FINAL SCRIPT WITH WHATSAPP INTEGRATION -->
-<script>
-  // Style input fields
-  document.querySelectorAll(".input").forEach(el =>
-    el.classList.add("w-full","px-4","py-2","border","border-gray-300","rounded-lg","focus:ring-2","focus:ring-indigo-500")
-  );
-
-  // Bag type dropdown
-  bagTypes.forEach(b =>
-    document.getElementById("bagType").innerHTML += `<option value="${b.name}">${b.name}</option>`
-  );
-
-  // SEND TO WHATSAPP FUNCTION
-  function sendMail() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const organization = document.getElementById("organization").value;
-    const bagType = document.getElementById("bagType").value;
-    const quantity = document.getElementById("quantity").value;
-    const message = document.getElementById("message").value;
-
-    if (!name || !email || !phone) {
-      alert("Please fill required fields!");
-      return;
+    :root {
+      --charcoal: #2C3338;
+      --charcoal-dark: #1E2429;
+      --coral: #F05A5A;
+      --coral-light: #FF7B7B;
+      --bg-body: #F4F6F8;
+      --bg-card: #FFFFFF;
+      --gray: #6B7280;
+      --light-gray: #E5E7EB;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: all 0.3s ease;
     }
 
-    const whatsappMessage =
-      `🛍️ *New Bag Inquiry Received*\n\n` +
-      `👤 *Name:* ${name}\n` +
-      `📩 *Email:* ${email}\n` +
-      `📞 *Phone:* ${phone}\n` +
-      `🏢 *Organization:* ${organization}\n` +
-      `👜 *Bag Type:* ${bagType}\n` +
-      `📦 *Quantity:* ${quantity}\n` +
-      `📝 *Message:* ${message}`;
+    html { scroll-behavior: smooth; }
 
-    const whatsappNumber = "917903433690";
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--charcoal);
+      background: var(--bg-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
-      "_blank"
-    );
-  }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-  lucide.createIcons();
-</script>
+    /* ===== HEADER ===== */
+    header {
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px solid var(--coral);
+    }
 
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .logo img { height: 50px; width: auto; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--coral);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--coral); }
+
+    .header-cta {
+      background: var(--coral);
+      color: var(--bg-card);
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(240, 90, 90, 0.3);
+    }
+
+    .header-cta:hover {
+      background: var(--coral-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(240, 90, 90, 0.4);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--charcoal);
+      cursor: pointer;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal-dark) 0%, var(--charcoal) 100%);
+      color: var(--bg-card);
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(240, 90, 90, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content { position: relative; z-index: 1; max-width: 650px; }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(240, 90, 90, 0.2);
+      color: var(--coral-light);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      border: 1px solid rgba(240, 90, 90, 0.3);
+    }
+
+    .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 span { color: var(--coral); }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #B0B8BF;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--coral);
+      color: var(--bg-card);
+      box-shadow: 0 4px 15px rgba(240, 90, 90, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--coral-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(240, 90, 90, 0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--bg-card);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--coral);
+      color: var(--coral);
+      background: rgba(240, 90, 90, 0.05);
+    }
+
+    /* ===== SECTION STYLES ===== */
+    .section { padding: 80px 0; }
+    .section-header { text-align: center; margin-bottom: 56px; }
+
+    .section-label {
+      display: inline-block;
+      color: var(--coral);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      background: linear-gradient(135deg, var(--charcoal-dark) 0%, #3D454C 100%);
+      border-radius: var(--radius);
+      padding: 60px 40px;
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .about-image::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -30%;
+      width: 300px; height: 300px;
+      background: rgba(240, 90, 90, 0.15);
+      border-radius: 50%;
+    }
+
+    .about-image-content { position: relative; z-index: 1; text-align: center; color: var(--bg-card); }
+
+    .about-image-content .big-number {
+      font-size: 5rem;
+      font-weight: 800;
+      color: var(--coral);
+      line-height: 1;
+      margin-bottom: 8px;
+      text-shadow: 0 4px 15px rgba(240, 90, 90, 0.3);
+    }
+
+    .about-image-content .big-number-label {
+      font-size: 0.9rem;
+      color: #B0B8BF;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .about-text h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; color: var(--charcoal); }
+    .about-text p { color: var(--gray); margin-bottom: 16px; font-size: 1rem; }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      background: var(--bg-card);
+      padding: 12px 16px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--light-gray);
+    }
+
+    .about-feature .dot { width: 8px; height: 8px; background: var(--coral); border-radius: 50%; flex-shrink: 0; }
+
+    /* ===== PRODUCTS ===== */
+    .products { background: var(--bg-body); }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition);
+      border: 1px solid var(--light-gray);
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--coral);
+    }
+
+    .product-image {
+      height: 260px;
+      background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .product-image svg {
+      width: 100px;
+      height: 100px;
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+
+    .product-card:hover .product-image svg { transform: scale(1.1); opacity: 1; }
+
+    .product-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      background: var(--coral);
+      color: var(--bg-card);
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      z-index: 2;
+      box-shadow: 0 4px 10px rgba(240, 90, 90, 0.3);
+    }
+
+    .product-info {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-info h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; color: var(--charcoal); }
+    .product-info p { color: var(--gray); font-size: 0.9rem; margin-bottom: 12px; flex: 1; }
+
+    /* Quantity Selector */
+    .product-options { margin: 12px 0; }
+
+    .product-options label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gray);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .product-options select,
+    .product-options input[type="number"] {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      background: var(--bg-body);
+      transition: var(--transition);
+    }
+
+    .product-options select { cursor: pointer; }
+
+    .product-options input[type="number"] {
+      margin-top: 8px;
+      display: none;
+    }
+
+    .product-options input[type="number"].show {
+      display: block;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .product-options select:focus,
+    .product-options input[type="number"]:focus {
+      outline: none;
+      border-color: var(--coral);
+      box-shadow: 0 0 0 3px rgba(240, 90, 90, 0.1);
+    }
+
+    .moq-note {
+      font-size: 0.75rem;
+      color: var(--coral);
+      font-weight: 600;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .custom-error {
+      font-size: 0.75rem;
+      color: #DC2626;
+      font-weight: 600;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .custom-error.show { display: block; }
+
+    .product-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--light-gray);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .price-block { display: flex; flex-direction: column; }
+
+    .product-price {
+      font-weight: 800;
+      color: var(--charcoal);
+      font-size: 1.2rem;
+    }
+
+    .product-unit-price {
+      font-size: 0.75rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .enquiry-btn {
+      background: var(--charcoal);
+      color: var(--bg-card);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .enquiry-btn:hover {
+      background: var(--coral);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(240, 90, 90, 0.4);
+    }
+
+    /* ===== WHY US ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+    }
+
+    .why-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid var(--light-gray);
+      box-shadow: var(--shadow);
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--coral);
+    }
+
+    .why-icon {
+      width: 56px; height: 56px;
+      background: rgba(240, 90, 90, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--coral);
+      font-size: 1.5rem;
+    }
+
+    .why-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .why-card p { color: var(--gray); font-size: 0.9rem; }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--charcoal-dark); color: var(--bg-card); }
+    .contact .section-label { color: var(--coral-light); }
+    .contact .section-title { color: var(--bg-card); }
+    .contact .section-desc { color: #B0B8BF; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+
+    .contact-info-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+
+    .contact-icon {
+      width: 48px; height: 48px;
+      background: rgba(240, 90, 90, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--coral);
+      font-size: 1.2rem;
+    }
+
+    .contact-info-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; color: var(--bg-card); }
+    .contact-info-item p, .contact-info-item a { color: #B0B8BF; font-size: 0.9rem; transition: var(--transition); }
+    .contact-info-item a:hover { color: var(--coral); }
+
+    .contact-form {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-form h3 { font-size: 1.3rem; font-weight: 800; color: var(--charcoal); margin-bottom: 24px; }
+
+    .form-group { margin-bottom: 18px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      transition: var(--transition);
+      background: var(--bg-body);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--coral);
+      box-shadow: 0 0 0 3px rgba(240, 90, 90, 0.15);
+      background: var(--bg-card);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--coral);
+      color: var(--bg-card);
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .form-submit:hover {
+      background: var(--coral-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(240, 90, 90, 0.4);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #151A1F;
+      color: #B0B8BF;
+      padding: 48px 0 24px;
+      border-top: 3px solid var(--coral);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand img { height: 45px; margin-bottom: 16px; filter: brightness(0) invert(1); }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 300px; }
+
+    .footer-col h4 {
+      color: var(--bg-card);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 30px; height: 2px;
+      background: var(--coral);
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { font-size: 0.9rem; transition: var(--transition); }
+    .footer-col ul li a:hover { color: var(--coral); padding-left: 4px; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+
+    .footer-bottom a { color: var(--coral); font-weight: 600; }
+
+    /* ===== FLOATING WHATSAPP ===== */
+    .float-wa {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: var(--transition);
+      animation: pulse 2s infinite;
+    }
+
+    .float-wa:hover { transform: scale(1.1); }
+    .float-wa svg { width: 28px; height: 28px; fill: white; }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7); }
+      100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 968px) {
+      .hero h1 { font-size: 2.4rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .header-cta { display: none; }
+
+      .hero { padding: 70px 0 60px; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+
+      .section { padding: 60px 0; }
+      .section-title { font-size: 1.7rem; }
+
+      .about-features { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .float-wa { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.7rem; }
+      .hero-buttons { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+      .contact-form { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="https://i.ibb.co/placeholder/anvibe-logo.png" alt="A&N VIBE" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:1.4rem;font-weight:800;color:#2C3338\'>A<span style=\'color:#F05A5A\'>&</span>N VIBE</span>'">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/917903433690?text=Hello%20A%26N%20VIBE%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." class="header-cta" target="_blank">
+        <span>💬</span> Enquire Now
+      </a>
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Premium Bag Manufacturer — Mumbai</span>
+        <h1>Crafted for <span>Style</span>, Built for <span>Everyday</span></h1>
+        <p>A&N VIBE brings you premium totes, pencil pouches, and jholas — designed with precision and made with quality materials you can trust.</p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">View Products →</a>
+          <a href="https://wa.me/917903433690?text=Hello%20A%26N%20VIBE%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." class="btn btn-outline" target="_blank">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-image-content">
+            <div class="big-number">15+</div>
+            <div class="big-number-label">Years of Craftsmanship</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-label">About A&N VIBE</span>
+          <h3>Your Trusted Bag Manufacturing Partner in Mumbai</h3>
+          <p>Located in the heart of Byculla, Mumbai, A&N VIBE is a premium bag manufacturing company dedicated to delivering high-quality, durable, and stylish bags for everyday use.</p>
+          <p>From corporate gifting to personal accessories, we specialize in crafting totes, pencil pouches, and premium jholas that blend functionality with contemporary design.</p>
+          <div class="about-features">
+            <div class="about-feature"><span class="dot"></span> Premium Materials</div>
+            <div class="about-feature"><span class="dot"></span> Custom Orders</div>
+            <div class="about-feature"><span class="dot"></span> Bulk Manufacturing</div>
+            <div class="about-feature"><span class="dot"></span> Pan-India Delivery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Collection</span>
+        <h2 class="section-title">Premium Bags & Accessories</h2>
+        <p class="section-desc">Explore our curated range of high-quality bags designed for everyday elegance and durability.</p>
+      </div>
+      <div class="product-grid">
+
+        <!-- Pencil Pouch -->
+        <div class="product-card">
+          <div class="product-image">
+            <span class="product-badge">Best Seller</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F05A5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="8" width="18" height="12" rx="2"/>
+              <path d="M3 8V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1"/>
+              <path d="M12 8v12"/>
+              <path d="M8 12h8"/>
+              <circle cx="12" cy="5" r="1"/>
+            </svg>
+          </div>
+          <div class="product-info">
+            <h3>Premium Pencil Pouch</h3>
+            <p>Spacious, stylish, and durable pencil pouch perfect for students and professionals. Available in multiple colors.</p>
+            <div class="product-options">
+              <label>Quantity (MOQ: 10 pcs)</label>
+              <select class="qty-select" data-product="pencil" onchange="onQuantityChange(this)">
+                <option value="10">10 pcs</option>
+                <option value="25">25 pcs</option>
+                <option value="50">50 pcs</option>
+                <option value="100">100 pcs</option>
+                <option value="custom">✏️ Custom Quantity</option>
+              </select>
+              <input type="number" class="custom-qty" data-product="pencil" min="10" placeholder="Enter quantity (min 10)" oninput="onCustomQtyInput(this)">
+              <span class="custom-error" id="error-pencil">Minimum quantity is 10 pcs</span>
+            </div>
+            <div class="product-meta">
+              <div class="price-block">
+                <span class="product-price" id="price-pencil">₹1,990</span>
+                <span class="product-unit-price" id="unit-pencil">(₹199/pc)</span>
+              </div>
+              <button class="enquiry-btn" onclick="enquireProduct('pencil')">💬 Enquiry</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tote Bag -->
+        <div class="product-card">
+          <div class="product-image">
+            <span class="product-badge">Popular</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F05A5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
+          <div class="product-info">
+            <h3>Classic Tote Bag</h3>
+            <p>Elegant and spacious tote bag ideal for daily use, shopping, and corporate gifting. Made with premium fabric.</p>
+            <div class="product-options">
+              <label>Quantity (MOQ: 5 pcs)</label>
+              <select class="qty-select" data-product="tote" onchange="onQuantityChange(this)">
+                <option value="5">5 pcs</option>
+                <option value="20">20 pcs</option>
+                <option value="50">50 pcs</option>
+                <option value="custom">✏️ Custom Quantity</option>
+              </select>
+              <input type="number" class="custom-qty" data-product="tote" min="5" placeholder="Enter quantity (min 5)" oninput="onCustomQtyInput(this)">
+              <span class="custom-error" id="error-tote">Minimum quantity is 5 pcs</span>
+            </div>
+            <div class="product-meta">
+              <div class="price-block">
+                <span class="product-price" id="price-tote">₹2,495</span>
+                <span class="product-unit-price" id="unit-tote">(₹499/pc)</span>
+              </div>
+              <button class="enquiry-btn" onclick="enquireProduct('tote')">💬 Enquiry</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premium Jhola -->
+        <div class="product-card">
+          <div class="product-image">
+            <span class="product-badge">Premium</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F05A5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7h16"/>
+              <path d="M4 7l-2 13a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2L20 7"/>
+              <path d="M9 7V5a3 3 0 0 1 6 0v2"/>
+              <path d="M9 12h6"/>
+            </svg>
+          </div>
+          <div class="product-info">
+            <h3>Premium Jhola Bag</h3>
+            <p>Handcrafted premium jhola with superior finish. Perfect for casual outings, college, and travel. Ethically made.</p>
+            <div class="product-options">
+              <label>Quantity (MOQ: 5 pcs)</label>
+              <select class="qty-select" data-product="jhola" onchange="onQuantityChange(this)">
+                <option value="5">5 pcs</option>
+                <option value="20">20 pcs</option>
+                <option value="50">50 pcs</option>
+                <option value="custom">✏️ Custom Quantity</option>
+              </select>
+              <input type="number" class="custom-qty" data-product="jhola" min="5" placeholder="Enter quantity (min 5)" oninput="onCustomQtyInput(this)">
+              <span class="custom-error" id="error-jhola">Minimum quantity is 5 pcs</span>
+            </div>
+            <div class="product-meta">
+              <div class="price-block">
+                <span class="product-price" id="price-jhola">₹3,495</span>
+                <span class="product-unit-price" id="unit-jhola">(₹699/pc)</span>
+              </div>
+              <button class="enquiry-btn" onclick="enquireProduct('jhola')">💬 Enquiry</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">Quality You Can Trust</h2>
+        <p class="section-desc">We combine traditional craftsmanship with modern design to deliver bags that stand the test of time.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <h4>Premium Quality</h4>
+          <p>Only the finest materials and stitching techniques are used in every product we manufacture.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎨</div>
+          <h4>Custom Designs</h4>
+          <p>We offer customization options for corporate gifting, events, and personal preferences.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🚚</div>
+          <h4>Fast Delivery</h4>
+          <p>Quick turnaround times with reliable shipping across Mumbai and all of India.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💎</div>
+          <h4>Affordable Pricing</h4>
+          <p>Competitive wholesale and retail pricing without compromising on quality or craftsmanship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-desc">Have a question or want to place a bulk order? Reach out to us — we'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Visit Us</h4>
+              <p>Jakariya Building, Near Madina Masjid,<br>Byculla, Mumbai, Maharashtra — 400011</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">💬</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/917903433690" target="_blank">+91 79034 33690</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:anvibe@gmail.com">anvibe@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">🕒</div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Mon — Sat: 9:00 AM — 8:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send an Enquiry</h3>
+          <form id="contactForm" onsubmit="sendToWhatsApp(event)">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+              <label>Product of Interest</label>
+              <select id="productSelect">
+                <option value="Premium Pencil Pouch">Premium Pencil Pouch</option>
+                <option value="Classic Tote Bag">Classic Tote Bag</option>
+                <option value="Premium Jhola Bag">Premium Jhola Bag</option>
+                <option value="Bulk Order / Corporate Gifting">Bulk Order / Corporate Gifting</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="message" placeholder="Tell us about your requirements..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send via WhatsApp →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://i.ibb.co/placeholder/anvibe-logo.png" alt="A&N VIBE" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<h3 style=\'color:#fff;font-size:1.3rem;margin-bottom:16px\'>A<span style=\'color:#F05A5A\'>&</span>N VIBE</h3>')">
+          <p>Premium bag manufacturing company based in Byculla, Mumbai. Crafting quality totes, pencil pouches, and jholas for every need.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">Pencil Pouch</a></li>
+            <li><a href="#products">Tote Bag</a></li>
+            <li><a href="#products">Premium Jhola</a></li>
+            <li><a href="#contact">Bulk Orders</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Jakariya Building, Byculla</li>
+            <li>Mumbai — 400011</li>
+            <li><a href="https://wa.me/917903433690">+91 79034 33690</a></li>
+            <li><a href="mailto:anvibe@gmail.com">anvibe@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 A&N VIBE. All rights reserved.</p>
+        <p>Made with <span style="color:#F05A5A">♥</span> in Mumbai</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/917903433690?text=Hello%20A%26N%20VIBE%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." class="float-wa" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    // ===== PRICING CONFIG =====
+    const pricing = {
+      pencil: {
+        name: 'Premium Pencil Pouch',
+        moq: 10,
+        tiers: [
+          { min: 10, max: 24, price: 199 },
+          { min: 25, max: 49, price: 179 },
+          { min: 50, max: 99, price: 159 },
+          { min: 100, max: Infinity, price: 149 }
+        ]
+      },
+      tote: {
+        name: 'Classic Tote Bag',
+        moq: 5,
+        tiers: [
+          { min: 5, max: 19, price: 499 },
+          { min: 20, max: 49, price: 449 },
+          { min: 50, max: Infinity, price: 399 }
+        ]
+      },
+      jhola: {
+        name: 'Premium Jhola Bag',
+        moq: 5,
+        tiers: [
+          { min: 5, max: 19, price: 699 },
+          { min: 20, max: 49, price: 629 },
+          { min: 50, max: Infinity, price: 559 }
+        ]
+      }
+    };
+
+    // ===== GET UNIT PRICE BASED ON QUANTITY =====
+    function getUnitPrice(productKey, quantity) {
+      const product = pricing[productKey];
+      for (let tier of product.tiers) {
+        if (quantity >= tier.min && quantity <= tier.max) {
+          return tier.price;
+        }
+      }
+      return product.tiers[0].price;
+    }
+
+    // ===== GET CURRENT QUANTITY (handles both dropdown & custom) =====
+    function getCurrentQuantity(productKey) {
+      const select = document.querySelector(`.qty-select[data-product="${productKey}"]`);
+      if (select.value === 'custom') {
+        const customInput = document.querySelector(`.custom-qty[data-product="${productKey}"]`);
+        return parseInt(customInput.value) || 0;
+      }
+      return parseInt(select.value);
+    }
+
+    // ===== UPDATE PRICE DISPLAY =====
+    function updatePriceDisplay(productKey, quantity) {
+      if (!quantity || quantity < pricing[productKey].moq) {
+        document.getElementById(`price-${productKey}`).textContent = '—';
+        document.getElementById(`unit-${productKey}`).textContent = 'Enter valid quantity';
+        return;
+      }
+      const unitPrice = getUnitPrice(productKey, quantity);
+      const totalPrice = quantity * unitPrice;
+      document.getElementById(`price-${productKey}`).textContent = `₹${totalPrice.toLocaleString('en-IN')}`;
+      document.getElementById(`unit-${productKey}`).textContent = `(₹${unitPrice}/pc)`;
+    }
+
+    // ===== HANDLE DROPDOWN CHANGE =====
+    function onQuantityChange(selectElement) {
+      const productKey = selectElement.dataset.product;
+      const customInput = document.querySelector(`.custom-qty[data-product="${productKey}"]`);
+      const errorEl = document.getElementById(`error-${productKey}`);
+
+      if (selectElement.value === 'custom') {
+        // Show custom input
+        customInput.classList.add('show');
+        customInput.focus();
+        errorEl.classList.remove('show');
+        // Reset price display until valid input
+        document.getElementById(`price-${productKey}`).textContent = '—';
+        document.getElementById(`unit-${productKey}`).textContent = `Min ${pricing[productKey].moq} pcs`;
+      } else {
+        // Hide custom input
+        customInput.classList.remove('show');
+        customInput.value = '';
+        errorEl.classList.remove('show');
+        // Update price
+        const quantity = parseInt(selectElement.value);
+        updatePriceDisplay(productKey, quantity);
+      }
+    }
+
+    // ===== HANDLE CUSTOM QUANTITY INPUT =====
+    function onCustomQtyInput(inputElement) {
+      const productKey = inputElement.dataset.product;
+      const moq = pricing[productKey].moq;
+      const errorEl = document.getElementById(`error-${productKey}`);
+      const quantity = parseInt(inputElement.value);
+
+      if (!quantity || quantity < moq) {
+        errorEl.classList.add('show');
+        errorEl.textContent = `Minimum quantity is ${moq} pcs`;
+        document.getElementById(`price-${productKey}`).textContent = '—';
+        document.getElementById(`unit-${productKey}`).textContent = `Min ${moq} pcs`;
+      } else {
+        errorEl.classList.remove('show');
+        updatePriceDisplay(productKey, quantity);
+      }
+    }
+
+    // ===== PRODUCT ENQUIRY TO WHATSAPP =====
+    function enquireProduct(productKey) {
+      const quantity = getCurrentQuantity(productKey);
+      const moq = pricing[productKey].moq;
+
+      // Validate
+      if (!quantity || quantity < moq) {
+        alert(`Please enter a valid quantity (minimum ${moq} pcs) for ${pricing[productKey].name}.`);
+        return;
+      }
+
+      const product = pricing[productKey];
+      const unitPrice = getUnitPrice(productKey, quantity);
+      const totalPrice = quantity * unitPrice;
+
+      const phone = '917903433690';
+      const message = `Hello A&N VIBE!\n\nI would like to enquire about:\n*Product:* ${product.name}\n*Quantity:* ${quantity} pcs\n*Unit Price:* ₹${unitPrice}/pc\n*Total Price:* ₹${totalPrice.toLocaleString('en-IN')}\n\nPlease share more details regarding customization, delivery, and payment.\n\nThank you.`;
+
+      const encodedMessage = encodeURIComponent(message);
+      window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+    }
+
+    // ===== CONTACT FORM TO WHATSAPP =====
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const product = document.getElementById('productSelect').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !phone || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      const waNumber = '917903433690';
+      const waMessage = `Hello A&N VIBE!\n\n*New Enquiry*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Product:* ${product}\n*Message:* ${message}\n\nPlease get back to me.`;
+
+      const encodedMessage = encodeURIComponent(waMessage);
+      window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, '_blank');
+    }
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelector('.nav-links').classList.remove('show');
+        }
+      });
+    });
+
+    // ===== INITIALIZE PRICES ON PAGE LOAD =====
+    document.querySelectorAll('.qty-select').forEach(select => {
+      const productKey = select.dataset.product;
+      const quantity = parseInt(select.value);
+      updatePriceDisplay(productKey, quantity);
+    });
+  </script>
 </body>
 </html>
